@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i,700");
+
+body {
+    margin: 0;
+    margin-bottom: 120px;
+}
+
+header.home {
+    margin-bottom: 50px;
+}
+
+header.home h1.title {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    color: #E46B6C;
+    text-align: center;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 0px;
+}
+
+header.home h1.title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header.home h2.subtitle {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    color: #92575D;
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 0px;
+}
+
+header.home h2.subtitle a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* Navigation */
+
+nav {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-bottom: 60px;
+}
+
+nav a {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #92575D;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1, h2 {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+section {
+    margin: 50px;
+    margin-top: 0px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 0px;
+}
+
+section a {
+    text-decoration: none;
+}
+section p mark {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 42px;
+    background-color: #E46B6C;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+section h1 mark {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 36px;
+    background-color: #E46B6C;
+    color: white;
+    padding-inline-end: 10px;
+    padding-inline-start: 10px;
+
+}
+
+section h2 mark {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    background-color: #208E8B;
+    color: white;
+    text-transform: uppercase;
+    padding-inline-end: 10px;
+    padding-inline-start: 10px;
+}
+
+article {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+article p.theme {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 32px;
+}
+
+article p mark {
+    background-color: #E46B6C;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+article h1 {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: black;
+    letter-spacing: 2px;
+}
+
+article h1 mark {
+    background-color: rgb(228, 107, 108, 0.75);
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+article header h1 {
+    font-family: "Alegreya Sans", "Open Sans", sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    color: white;
+}
+
+article header h1 mark {
+    background-color: #E46B6C;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+article p {
+    font-family: 'IBM Plex Serif', "Georgia", serif;
+    font-size: 21px;
+    line-height: 40px;
+    color: #92575D;
+    font-weight: lighter;
+}
+
+article ul li {
+    font-family: 'IBM Plex Serif', "Georgia", serif;
+    font-size: 21px;
+    line-height: 40px;
+    color: #92575D;
+    font-weight: lighter;
+}
+
+article p.chapeau {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+article h2 {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 32px;
+    margin-top: 32px;
+    color: #208E8B;
+    text-transform: none;
+}
+
+article section {
+    padding-top: 10px;
+    background-color: rgb(228, 107, 108, 0.25);
+    margin: 0px;
+    padding: 15px;
+}
+
+article section h1 {
+    font-size: 24px;
+    padding: 0px;
+    color: #E36A6C;
+}
+
+article section p {
+    columns: #333333;
+}
+
+img {
+    max-width: 100%;
+}
+
+article h1 {
+    margin-top: 125px;
+}
+
+article h2 {
+    margin-top: 62px;
+    margin-bottom: 62px;
+}
+
+article section h1 {
+    margin-top: inherit;
+    margin-bottom: inherit;
+}
+
+article section h2 {
+    margin-bottom: inherit;
+}
