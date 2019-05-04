@@ -232,3 +232,8 @@ article section h1 {
 article section h2 {
     margin-bottom: inherit;
 }
+
+p.message {
+    color: #E36A6C;
+    font-size: 24px;
+}
