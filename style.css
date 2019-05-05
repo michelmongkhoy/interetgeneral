@@ -39,23 +39,22 @@ header.home h2.subtitle a {
     text-decoration: inherit;
 }
 
-/* Navigation */
-
 nav {
     text-align: center;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    margin-bottom: 60px;
+    display:block;
+    text-transform:none;
 }
 
 nav a {
     font-family: "Alegreya Sans", "Open Sans", sans-serif;
-    font-size: 14px;
     letter-spacing: 2px;
+    font-size: xx-large;
     font-weight: 400;
     color: #92575D;
     text-transform: uppercase;
     text-decoration: none;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 nav a:hover {
@@ -236,4 +235,15 @@ article section h2 {
 p.message {
     color: #E36A6C;
     font-size: 24px;
+}
+
+@media (max-width:1024px) {
+    article {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    section {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
