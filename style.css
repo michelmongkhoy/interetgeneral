@@ -36,15 +36,17 @@ header.home h2.subtitle {
 
 header.home h2.subtitle a {
     color: inherit;
-    text-decoration: inherit;
+    text-decoration: inherit; 
 }
+
+/*test*/
 
 nav {
     text-align: center;
     display:block;
     text-transform:none;
     line-height: 2;
-    
+
 }
 
 nav p {
