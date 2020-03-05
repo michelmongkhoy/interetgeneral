@@ -43,6 +43,8 @@ nav {
     text-align: center;
     display:block;
     text-transform:none;
+    line-height: 2;
+    
 }
 
 nav p {
@@ -80,7 +82,7 @@ article {
 article h1 {
     font-family: "Alegreya Sans", "Open Sans", sans-serif;
     font-weight: 900;
-    font-size: xx-large;
+    font-size: 48px;
     letter-spacing: 2px;
 }
 
@@ -95,7 +97,7 @@ article h1 mark {
 article header h1 {
     font-family: "Alegreya Sans", "Open Sans", sans-serif;
     font-weight: 900;
-    font-size: xx-large;
+    font-size: 48px;
     color: white;
 }
 
@@ -110,8 +112,8 @@ article header h1 mark {
 /* Protégé */
 article p {
     font-family: 'IBM Plex Serif', "Georgia", serif;
-    font-size: medium;
-    line-height: 2;
+    font-size: 21px;
+    line-height: 40px;
     color: #92575D;
     font-weight: lighter;
 }
@@ -119,8 +121,8 @@ article p {
 /* Protégé */
 article ul li {
     font-family: 'IBM Plex Serif', "Georgia", serif;
-    font-size: medium;
-    line-height: 2;
+    font-size: 21px;
+    line-height: 40px;
     color: #92575D;
     font-weight: lighter;
 }
@@ -128,7 +130,7 @@ article ul li {
 article h2 {
     font-family: "Alegreya Sans", sans-serif;
     font-weight: 900;
-    font-size: x-large;
+    font-size: 36px;
     line-height: 32px;
     margin-top: 32px;
     color: #208E8B;
@@ -137,7 +139,6 @@ article h2 {
 
 img {
     max-width: 100%;
-    float: left;
     margin-right: 25px;
 }
 
