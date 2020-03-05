@@ -14,9 +14,14 @@
 
 
     <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="./raster2.css">
     <link rel="stylesheet" href="style.css">
 
-<!--End mc_embed_signup-->
     <title>Intérêt Général - Accueil</title>
     <meta name="description" content="Intérêt Général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
     <!-- Twitter Card data -->
@@ -37,33 +42,40 @@
 
 <body>
 
+
     <header class="home">
         <h1 class="title"><a href="./index.html">INTÉRET GÉNÉRAL</a></h1>
         <h2 class="subtitle"><a href="./index.html">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
     </header>
 
     <nav>
-        <p><a href="./la-fabrique/index.html">La fabrique</a>
-        <a href="./publications/index.html">Publications</a>
-        <a href="./contact/index.html">Contact</a></p>
-    </nav>
-
-    <article>
-        <h1><mark>À la une</mark></h1>
-
-        <a href="./publications/3.html"><img src="cover-note-3.png"/></a>
-        <p class="message">NOS RETRAITES, NOTRE AVENIR : POUR UN NOUVEAU SYSTÈME SOLIDAIRE PAR RÉPARTITION.</p>
         <p>
-            Quelle place donner au travail dans notre existence ? Comment répartir la richesse que nous produisons entre actifs et retraités ? En 1945, Ambroise Croizat déclarait : « Il faut faire de la retraite non plus l’antichambre de la mort mais une nouvelle étape de la vie ». La Sécurité sociale naissait, contractualisant un pacte de solidarité entre générations. Depuis 30 ans, les gouvernements libéraux n’ont cessé d’attaquer ce système solidaire, reculant notamment l’âge de départ en retraite. Ils se servent d’un progrès social, l’allongement de la durée de la vie, pour justifier une perte de nos droits. <a href="./publications/3.html">Lire la suite...</a></p>
-            <br/>
-            <p class="message"><a href="#newsletter">>>> Inscrivez-vous à la newsletter d'Intérêt Général ! </a></p>
-            <p class="message">>>> Et si vous nous suiviez sur Twitter ? <a href="https://twitter.com/interetgen?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Suivez Intérêt Général</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                <br/>
+            <a href="./index.html">Accueil</a>
+            <a href="./la-fabrique/index.html">La fabrique</a>
+            <a href="./publications/index.html">Publications</a>
+            <a href="./contact/index.html">Contact</a>
         </p>
+    </nav>
+    <br/>
+    
+    <r-grid columns=8>
 
-        <h1><mark>Notre actualité sur Twitter</mark></h1>
-        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-        <div class="elfsight-app-2b75b0c5-4d54-429e-9961-249cb41aaaf2"></div>
+    <r-cell span=2+4 span-s=row>
+    <article>
+        <r-grid columns=8>
+            <r-cell span=row>
+                <h1><mark>Nouvelle note !</mark></h1>
+                <h1 class="message"><a href="./publications/4.html">DE LA LIBRE ASSOCIATION DES COMMUNES ET DE LEUR CONTRIBUTION À LA BIFURCATION ÉCOLOGIQUE</a></h1>
+            </r-cell>
+        </r-grid>
+    
+        <a href="./publications/4.html"><img src="cover-note-4.png" style="width: 150px; height: 216px;margin-right: 25px;"/></a>
+
+        <p>Les élections municipales des 15 et 22 mars seront aussi intercommunales, chaque
+            commune étant intégrée depuis 2014 à une métropole, communauté d’agglomération,
+            communauté urbaine ou communauté de communes. <a href="./publications/4.html">Lire la suite...</a></p>
+
+        </p>
 
         <h1><mark>Précédentes publications</mark></h1>
         <a href="./publications/2.html"><img src="cover-note-2.png"/></a>
@@ -83,21 +95,26 @@
         <p>Nous sommes fonctionnaires de l’État et des collectivités territoriales, chercheur·se·s, universitaires, syndicalistes, dirigeant·s de PME et d’associations, cadres du secteur privé, ou exerçons une profession libérale ; nous considérons la conquête de la liberté de parole et d’opinion comme un combat. La faillite idéologique du macronisme et son irresponsabilité face aux urgences environnementale, sociale, internationale et démocratique nous révoltent. <a href="./publications/manifeste.html">Lire la suite...</a></p>
         <br/>
         <h1 id="newsletter"><mark>S'incrire à la newsletter</mark></h1>
-     
-  <div class="newsletter">
-    <div id="mc_embed_signup">
-    <form action="https://interetgeneral.us4.list-manage.com/subscribe/post?u=6c2eff8c0aa9bec8986514bd2&amp;id=71857683cd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-        <br/>
-        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Votre adresse email" required>
-        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6c2eff8c0aa9bec8986514bd2_71857683cd" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Je m'inscris" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-        </div>
-    </form>
-    </div>
-  </div>
+        <div class="newsletter">
+            <div id="mc_embed_signup">
+            <form action="https://interetgeneral.us4.list-manage.com/subscribe/post?u=6c2eff8c0aa9bec8986514bd2&amp;id=71857683cd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                <br/>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Votre adresse email" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6c2eff8c0aa9bec8986514bd2_71857683cd" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Je m'inscris" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+            </div>
+          </div>
+        </article>
+    </r-cell>
+    <r-cell span=2 span-s=row>
+        <a class="twitter-timeline" data-lang="fr" href="https://twitter.com/InteretGen?ref_src=twsrc%5Etfw">Tweets de InteretGen</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </r-cell>
 
+    </r-grid>
 </body>
 
 </html>
