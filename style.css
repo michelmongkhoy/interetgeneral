@@ -171,6 +171,10 @@ p.message {
     }
 }
 
+.message a, a:hover {
+    white-space: normal;
+    color: #E36A6C;
+}
 
 /* NEWSLETTER */
 
@@ -200,4 +204,8 @@ input[type=email] {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+}
+
+hr {
+    color: #E36A6C;
 }
