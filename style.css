@@ -117,7 +117,7 @@ article p {
     font-size: 21px;
     line-height: 40px;
     color: #92575D;
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 /* Protégé */
@@ -126,7 +126,7 @@ article ul li {
     font-size: 21px;
     line-height: 40px;
     color: #92575D;
-    font-weight: lighter;
+    font-weight: normal;
 }
 
 article h2 {
