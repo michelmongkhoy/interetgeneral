@@ -212,3 +212,20 @@ input[type=email] {
 hr {
     color: #E36A6C;
 }
+
+
+a.orange:link  {
+    color: #E36A6C;
+} 
+
+a.orange:visited {
+    color: #E36A6C;
+}
+
+a.orange:hover {
+    color: #E36A6C;
+}
+
+a.orange:active {
+    color: #E36A6C;
+}
