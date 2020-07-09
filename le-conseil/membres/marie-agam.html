@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-139613183-1');
+</script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Marie Agam - Intérêt Général</title>
+    <meta name="description" content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+       <!-- Twitter Card data -->
+       <meta name="twitter:card" content="summary">
+       <meta name="twitter:site" content="@InteretGen">
+       <meta name="twitter:title" content="Intérêt Général - Presse">
+       <meta name="twitter:description" content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+       <meta name="twitter:creator" content="@InteretGen">
+       <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+   
+       <!-- Open Graph data -->
+       <meta property="og:title" content="Intérêt Général - Presse" />
+       <meta property="og:url" content="http://interetgeneral.net/presse" />
+       <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+       <meta property="og:description" content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." /> 
+       <script src="https://unpkg.com/vue"></script>
+       <script>
+           function getXDomainRequest() {
+    var xdr = null;
+
+    if (window.XDomainRequest) {
+        xdr = new XDomainRequest();
+    } else if (window.XMLHttpRequest) {
+        xdr = new XMLHttpRequest();
+    } else {
+        alert("Votre navigateur ne gère pas l'AJAX cross-domain !");
+    }
+    return xdr;
+}
+
+
+function getData(url) {
+    return new Promise(function (resolve, reject) {
+        var xdr = getXDomainRequest();
+        xdr.onload = function () {
+            resolve(xdr.responseText);
+        }
+        xdr.error = function () {
+            reject("error when getting data for url:" + url)
+        }
+
+        xdr.open("GET", url);
+        xdr.send()
+    });
+}
+       </script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="../index.html">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="../index.html">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../index.html">Accueil</a>
+            <a href="../la-fabrique/index.html">La fabrique</a>
+            <a href="../publications/index.html">Publications</a>
+            <a href="../presse/index.html">Presse</a>
+            <a href="../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="imageLink"/>
+        <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+        <p>{{ record.fields.Biographie }} </p>
+    </article>
+    </div>
+</body>
+
+<script>
+    var app = new Vue({
+     el: '#app',
+     data: {
+         message: 'Hello Vue!',
+         imageLink: "",
+         record: {
+             fields: {
+                 Prénom: "",
+                 Nom: "",
+                 Biographie: ""
+             }
+         }
+     },
+     methods: {
+         loadData: function() {
+            var order = 3
+            var url = "https://us-central1-interet-general-net.cloudfunctions.net/getMemberInfo?order=" + order
+            getData(url).then(function (record) {
+                app.record = JSON.parse(record)
+                app.imageLink = app.record.fields.Photo[0].thumbnails.large.url
+                console.log(imageLink)
+            })
+                .catch(function (error) {
+                    console.log(error)
+                })
+         }
+     },
+    created: function (){
+        this.loadData()
+     }
+})
+</script>
+</html>
