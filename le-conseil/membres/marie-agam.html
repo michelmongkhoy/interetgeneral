@@ -35,50 +35,17 @@
         content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
     <script src="https://unpkg.com/vue"></script>
     <script>
-        function getXDomainRequest() {
-            var xdr = null;
-
-            if (window.XDomainRequest) {
-                xdr = new XDomainRequest();
-            } else if (window.XMLHttpRequest) {
-                xdr = new XMLHttpRequest();
-            } else {
-                alert("Votre navigateur ne gère pas l'AJAX cross-domain !");
-            }
-            return xdr;
-        }
-
-
-        function creerRequeteCORS(methode, url) {
-            var xhr = new XMLHttpRequest();
-            //Test pour savoir si l'objet XHR gère withCredentials, ce qui indique qu'il s'agit bien de la version 2 de XHR
-            if (withCredentials in xhr) {
-                xhr.open(method, url, true);
-            }
-            //Sinon on teste l'objet XDomainRequest pour Internet Explorer
-            else if (typeof XDomainRequest != undefined) {
-                xhr = new XDomainRequest();
-                xhr.open(method, url);
-            }
-            //Sinon le navigateur est trop ancien, il ne gère pas cette API
-            else
-                xhr = null;
-            return xhr;
-        }
-
         function getData(url) {
-            return new Promise(function (resolve, reject) {
-
                 var http_request;
                 http_request = new XMLHTTPRequest();
                 http_request.onreadystatechange = function () { 
-                    resolve(xdr.responseText);
+                    resolve(http_request.responseText);
                 };
                 http_request.open("GET", url);
                 http_request.withCredentials = true;
                 http_request.setRequestHeader("Content-Type", "application/json");
                 http_request.send({ 'request': "authentication token" });
-            });
+                return http_request
         }
     </script>
 </head>
