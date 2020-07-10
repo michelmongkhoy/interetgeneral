@@ -35,16 +35,18 @@
         content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
     <script src="https://unpkg.com/vue"></script>
     <script>
+    
+    var http_request = new XMLHTTPRequest();
+
         function getData(url) {
-                var http_request;
-                http_request = new XMLHTTPRequest();
+                
                 http_request.onreadystatechange = function () { 
                     resolve(http_request.responseText);
                 };
                 http_request.open("GET", url);
                 http_request.withCredentials = true;
-                http_request.setRequestHeader("Content-Type", "application/json");
-                http_request.send({ 'request': "authentication token" });
+                //http_request.setRequestHeader("Content-Type", "application/json");
+                http_request.send();
                 return http_request
         }
     </script>
