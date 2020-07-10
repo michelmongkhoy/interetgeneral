@@ -36,19 +36,37 @@
     <script src="https://unpkg.com/vue"></script>
     <script>
     
-    var http_request = new XMLHTTPRequest();
+    function getXDomainRequest() {
+    var xdr = null;
 
-        function getData(url) {
-                
-                http_request.onreadystatechange = function () { 
-                    resolve(http_request.responseText);
-                };
-                http_request.open("GET", url);
-                http_request.withCredentials = true;
-                //http_request.setRequestHeader("Content-Type", "application/json");
-                http_request.send();
-                return http_request
+    if (window.XDomainRequest) {
+        xdr = new XDomainRequest();
+        console.loadData("domain")
+    } else if (window.XMLHttpRequest) {
+        console.log("XML")
+        xdr = new XMLHttpRequest();
+        xdr.withCredentials = true;
+    } else {
+        alert("Votre navigateur ne gère pas l'AJAX cross-domain !");
+    }
+    return xdr;
+}
+
+
+function getData(url) {
+    return new Promise(function (resolve, reject) {
+        var xdr = getXDomainRequest();
+        xdr.onload = function () {
+            resolve(xdr.responseText);
         }
+        xdr.error = function () {
+            reject("error when getting data for url:" + url)
+        }
+
+        xdr.open("GET", url);
+        xdr.send()
+    });
+}
     </script>
 </head>
 
