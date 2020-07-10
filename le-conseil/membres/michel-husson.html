@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Michel Husson - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Michel Husson - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Michel Husson - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recWsJRLjDZfSIbQk","_rawJson":{"id":"recWsJRLjDZfSIbQk","fields":{"Id":18,"Ordre 8 Juillet 2020":18,"Biographie":"Michel Husson est économiste et chercheur associé à l’Institut de recherches économiques et sociales (IRES), lié aux organisations syndicales depuis sa retraite. Ancien administrateur de l’Insee, il a conduit des travaux de modélisation à la Direction de la prévision du ministère des finances, puis à l’Institut statistique mexicain. Il travaille ensuite principalement sur la question de l’emploi. En 2015, il a participé à la Commission pour la vérité sur la dette grecque installée par la présidente du parlement grec de l’époque. Ayant milité à la LCR, est depuis longtemps engagé dans diverses activités militantes et participe notamment au conseil scientifique d’Attac, à la Fondation Copernic et aux Économistes atterrés. \n\nOutre divers articles et la participation à des ouvrages collectifs, il a publié plusieurs ouvrages dont _[Le Capitalisme en 10 leçons][1]_ (éditions La découverte, 2012) et _[Un Pur capitalisme][2]_ (éditions Page Deux, 2008). Ses nombreuses contributions sont disponibles sur son site :[ **http://hussonet.free.fr/ **][3]\n\n  [1]: https://www.editionsladecouverte.fr/catalogue/index-Le_capitalisme_en_10_le__ons-9782707194596.html\n  [2]: http://www.page2.ch/EdPage2/40-3_Husson2008.htm\n  [3]: http://hussonet.free.fr/\n","Prénom":"Michel","Nom":"Husson","Photo":[{"id":"attovHEyBWqkaDASt","url":"https://dl.airtable.com/.attachments/0f59935e1c3283f28049415832e01925/a65b3f15/18.png","filename":"18.png","size":68718,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/13feb2223c4a7f80e7da2ba16ff35487/b5532fc9","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/f2dac158ce14bbc21037bb44371fd93d/67f5cde7","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/60c16afc3147084fb8a4f4b312cfd058/f34e9fd5","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":18,"Ordre 8 Juillet 2020":18,"Biographie":"Michel Husson est économiste et chercheur associé à l’Institut de recherches économiques et sociales (IRES), lié aux organisations syndicales depuis sa retraite. Ancien administrateur de l’Insee, il a conduit des travaux de modélisation à la Direction de la prévision du ministère des finances, puis à l’Institut statistique mexicain. Il travaille ensuite principalement sur la question de l’emploi. En 2015, il a participé à la Commission pour la vérité sur la dette grecque installée par la présidente du parlement grec de l’époque. Ayant milité à la LCR, est depuis longtemps engagé dans diverses activités militantes et participe notamment au conseil scientifique d’Attac, à la Fondation Copernic et aux Économistes atterrés. \n\nOutre divers articles et la participation à des ouvrages collectifs, il a publié plusieurs ouvrages dont _[Le Capitalisme en 10 leçons][1]_ (éditions La découverte, 2012) et _[Un Pur capitalisme][2]_ (éditions Page Deux, 2008). Ses nombreuses contributions sont disponibles sur son site :[ **http://hussonet.free.fr/ **][3]\n\n  [1]: https://www.editionsladecouverte.fr/catalogue/index-Le_capitalisme_en_10_le__ons-9782707194596.html\n  [2]: http://www.page2.ch/EdPage2/40-3_Husson2008.htm\n  [3]: http://hussonet.free.fr/\n","Prénom":"Michel","Nom":"Husson","Photo":[{"id":"attovHEyBWqkaDASt","url":"https://dl.airtable.com/.attachments/0f59935e1c3283f28049415832e01925/a65b3f15/18.png","filename":"18.png","size":68718,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/13feb2223c4a7f80e7da2ba16ff35487/b5532fc9","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/f2dac158ce14bbc21037bb44371fd93d/67f5cde7","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/60c16afc3147084fb8a4f4b312cfd058/f34e9fd5","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

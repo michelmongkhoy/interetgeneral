@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Charlotte Girard - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Charlotte Girard - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Charlotte Girard - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recUYR6bnk7dwF6xZ","_rawJson":{"id":"recUYR6bnk7dwF6xZ","fields":{"Id":13,"Ordre 8 Juillet 2020":13,"Biographie":"Charlotte Girard est maîtresse de conférences en droit public, habilitée à diriger des recherches à l’Université de Paris Ouest Nanterre — La Défense. Spécialiste de droit constitutionnel et de théorie du droit, elle enseigne notamment le droit constitutionnel de la Ve République et la théorie constitutionnelle depuis une dizaine d’années. Après une thèse de théorie du droit qu’elle a élaborée entre la France et l’Angleterre (Du fondement du droit aux droits fondamentaux, Publications de la Sorbonne, 2010), ses travaux se sont portés sur la question des droits fondamentaux en temps de crise (_L’Hypothèse de la circulation des normes de lutte contre le terrorisme_, Bruylant, 2012) et l’épistémologie du droit comparé, ce qui l’a conduite à tenir des séminaires en théorie des droits fondamentaux, contentieux constitutionnel comparé et méthodologie du droit comparé, entre autres.\nElle est membre d’un groupe de recherche juridique sur le genre, l’amenant à se spécialiser dans le fonctionnement juridique de la parité, notamment dans les institutions politiques, et qui l’a qualifiée pour devenir membre associée de la commission Parité du Haut Conseil à l’Égalité entre les femmes et les hommes.\nCharlotte Girard s’intéresse également aux questions pédagogiques et expérimente un enseignement clinique du droit en co-animant le programme d’Enseignement Universitaire CLInique du Droit de Nanterre (EUCLID) caractérisé par une approche originale à la fois critique et engagée sur le plan de la responsabilité sociale de l’Université.\n\nElle est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Charlotte","Nom":"Girard","Photo":[{"id":"attxjSGuxqSlKqVl9","url":"https://dl.airtable.com/.attachments/13aabc57dd4fceb9d98edcbf08e0e218/5898451e/13.png","filename":"13.png","size":71249,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/b0f4de3b89cc5ebdf55bf96f07491037/84bd9a59","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/5c644c3cefde83abacf18a44f92c3c48/71fabf2f","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/d4e26e6ddb5578854462e4f320fb6972/484d5402","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":13,"Ordre 8 Juillet 2020":13,"Biographie":"Charlotte Girard est maîtresse de conférences en droit public, habilitée à diriger des recherches à l’Université de Paris Ouest Nanterre — La Défense. Spécialiste de droit constitutionnel et de théorie du droit, elle enseigne notamment le droit constitutionnel de la Ve République et la théorie constitutionnelle depuis une dizaine d’années. Après une thèse de théorie du droit qu’elle a élaborée entre la France et l’Angleterre (Du fondement du droit aux droits fondamentaux, Publications de la Sorbonne, 2010), ses travaux se sont portés sur la question des droits fondamentaux en temps de crise (_L’Hypothèse de la circulation des normes de lutte contre le terrorisme_, Bruylant, 2012) et l’épistémologie du droit comparé, ce qui l’a conduite à tenir des séminaires en théorie des droits fondamentaux, contentieux constitutionnel comparé et méthodologie du droit comparé, entre autres.\nElle est membre d’un groupe de recherche juridique sur le genre, l’amenant à se spécialiser dans le fonctionnement juridique de la parité, notamment dans les institutions politiques, et qui l’a qualifiée pour devenir membre associée de la commission Parité du Haut Conseil à l’Égalité entre les femmes et les hommes.\nCharlotte Girard s’intéresse également aux questions pédagogiques et expérimente un enseignement clinique du droit en co-animant le programme d’Enseignement Universitaire CLInique du Droit de Nanterre (EUCLID) caractérisé par une approche originale à la fois critique et engagée sur le plan de la responsabilité sociale de l’Université.\n\nElle est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Charlotte","Nom":"Girard","Photo":[{"id":"attxjSGuxqSlKqVl9","url":"https://dl.airtable.com/.attachments/13aabc57dd4fceb9d98edcbf08e0e218/5898451e/13.png","filename":"13.png","size":71249,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/b0f4de3b89cc5ebdf55bf96f07491037/84bd9a59","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/5c644c3cefde83abacf18a44f92c3c48/71fabf2f","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/d4e26e6ddb5578854462e4f320fb6972/484d5402","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

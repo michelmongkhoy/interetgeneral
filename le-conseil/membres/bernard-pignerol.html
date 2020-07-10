@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Bernard Pignerol - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Bernard Pignerol - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Bernard Pignerol - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recuUaf5VHIL1qFFg","_rawJson":{"id":"recuUaf5VHIL1qFFg","fields":{"Id":23,"Ordre 8 Juillet 2020":23,"Biographie":"Titulaire d'un DEA de droit public interne de l'université de Paris I et d'un DEA de philosophie du droit de l'université de Paris II, ancien élève de l'école du Louvre, Bernard Pignerol est également ancien élève de l'ENA (promotion Valmy), conseiller d'État.\nMembre fondateur de SOS racisme en 1984, il a été un des animateurs du groupe des experts _Brainpote_ et vice-président de 1988 à 1993. Il a été l'un des rédacteurs du _Manifeste pour l'intégration par la ville et par l'école_, secrétaire général de l'association de préfiguration de l'école des hautes études urbaines Fernand Braudel, il a collaboré à la revue Lumières de la ville.\nDe 2002 à 2005 il a présidé le conseil d'administration de l'ONISEP. Il a été rapporteur général adjoint de la section du rapport et des études du Conseil d'État et à publié dans l'AJDA.\n\nMembre de 1988 à 2002 de la direction de la Gauche Socialiste, il a présidé la commission des conflits du parti socialiste. De 2007 à 2014 il est conseiller international du maire de Paris, Bertrand Delanoë et délégué général aux relations internationales de la ville de Paris. Conseiller spécial de Jean-Luc Mélenchon alors ministre délégué à l'enseignement professionnel, il a retrouvé cette fonction auprès de lui lors de la campagne présidentielle de 2017. Signataire du manifeste fondateur d’Intérêt général, il est également président de l'Institut La Boétie.\n","Prénom":"Bernard","Nom":"Pignerol","Photo":[{"id":"attJREjTH0L2Eg4ye","url":"https://dl.airtable.com/.attachments/ac3cdb23787e9f4d3c50fbf6193f7d56/dcee1692/23.png","filename":"23.png","size":60466,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/a1ebfd54c238ddd14361910532739eb1/ebc640f8","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/6703c68cefeb2a7c174c56555427c9db/5036e508","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/0344cd4344ef480e75291dcd36a044ba/4a30c935","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":23,"Ordre 8 Juillet 2020":23,"Biographie":"Titulaire d'un DEA de droit public interne de l'université de Paris I et d'un DEA de philosophie du droit de l'université de Paris II, ancien élève de l'école du Louvre, Bernard Pignerol est également ancien élève de l'ENA (promotion Valmy), conseiller d'État.\nMembre fondateur de SOS racisme en 1984, il a été un des animateurs du groupe des experts _Brainpote_ et vice-président de 1988 à 1993. Il a été l'un des rédacteurs du _Manifeste pour l'intégration par la ville et par l'école_, secrétaire général de l'association de préfiguration de l'école des hautes études urbaines Fernand Braudel, il a collaboré à la revue Lumières de la ville.\nDe 2002 à 2005 il a présidé le conseil d'administration de l'ONISEP. Il a été rapporteur général adjoint de la section du rapport et des études du Conseil d'État et à publié dans l'AJDA.\n\nMembre de 1988 à 2002 de la direction de la Gauche Socialiste, il a présidé la commission des conflits du parti socialiste. De 2007 à 2014 il est conseiller international du maire de Paris, Bertrand Delanoë et délégué général aux relations internationales de la ville de Paris. Conseiller spécial de Jean-Luc Mélenchon alors ministre délégué à l'enseignement professionnel, il a retrouvé cette fonction auprès de lui lors de la campagne présidentielle de 2017. Signataire du manifeste fondateur d’Intérêt général, il est également président de l'Institut La Boétie.\n","Prénom":"Bernard","Nom":"Pignerol","Photo":[{"id":"attJREjTH0L2Eg4ye","url":"https://dl.airtable.com/.attachments/ac3cdb23787e9f4d3c50fbf6193f7d56/dcee1692/23.png","filename":"23.png","size":60466,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/a1ebfd54c238ddd14361910532739eb1/ebc640f8","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/6703c68cefeb2a7c174c56555427c9db/5036e508","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/0344cd4344ef480e75291dcd36a044ba/4a30c935","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

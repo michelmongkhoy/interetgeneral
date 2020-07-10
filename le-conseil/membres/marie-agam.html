@@ -4,6 +4,8 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -15,61 +17,25 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="../../style.css">
-    <title>Marie Agam - Intérêt Général</title>
+    <title>Marie Agam - Conseil d'orientation Scientifique - Intérêt Général</title>
     <meta name="description"
         content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@InteretGen">
-    <meta name="twitter:title" content="Intérêt Général - Presse">
+    <meta name="twitter:title" content="Marie Agam - Conseil d'orientation Scientifique - Intérêt Général">
     <meta name="twitter:description"
         content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
     <meta name="twitter:creator" content="@InteretGen">
     <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="Intérêt Général - Presse" />
+    <meta property="og:title" content="Marie Agam - Conseil d'orientation Scientifique - Intérêt Général" />
     <meta property="og:url" content="http://interetgeneral.net/presse" />
     <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
     <meta property="og:description"
         content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
     <script src="https://unpkg.com/vue"></script>
-    <script>
-
-        function getXDomainRequest() {
-
-
-            var xdr = null;
-
-            if (window.XDomainRequest) {
-                xdr = new XDomainRequest();
-                console.loadData("domain")
-            } else if (window.XMLHttpRequest) {
-                console.log("XML")
-                xdr = new XMLHttpRequest();
-                xdr.withCredentials = true;
-            } else {
-                alert("Votre navigateur ne gère pas l'AJAX cross-domain !");
-            }
-            return xdr;
-        }
-
-
-        function getData(url) {
-            return new Promise(function (resolve, reject) {
-                var xdr = getXDomainRequest();
-                xdr.onload = function () {
-                    resolve(xdr.responseText);
-                }
-                xdr.error = function () {
-                    reject("error when getting data for url:" + url)
-                }
-
-                xdr.open("GET", url, true);
-                xdr.send()
-            });
-        }
-    </script>
 </head>
 
 <body>
@@ -81,54 +47,45 @@
 
     <nav>
         <p>
-            <a href="#">Accueil</a>
-            <a href="../la-fabrique/index.html">La fabrique</a>
-            <a href="../publications/index.html">Publications</a>
-            <a href="../presse/index.html">Presse</a>
-            <a href="../contact/index.html">Contact</a>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
         </p>
     </nav>
 
     <div id="app">
         <article>
-            <img :src="imageLink" />
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
             <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
-            <p>{{ record.fields.Biographie }} </p>
+            <component :is="dynamicComponent" />
         </article>
     </div>
 </body>
 
 <script>
+    var converter = new showdown.Converter()
     var app = new Vue({
         el: '#app',
         data: {
-            message: 'Hello Vue!',
             imageLink: "",
-            record: {
-                fields: {
-                    Prénom: "",
-                    Nom: "",
-                    Biographie: ""
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recsPQpOpua4jnpdz","_rawJson":{"id":"recsPQpOpua4jnpdz","fields":{"Id":1,"Ordre 8 Juillet 2020":1,"Biographie":"Marie Agam est administratrice générale des ministères sociaux. Sa scolarité à l’ENA se déroule de 1982 à 1984. Issue du concours interne en tant qu’inspectrice des impôts, elle est nommée au ministère des affaires sociales à la direction des hôpitaux. Elle s’y occupe du financement des établissements de santé et de la planification sanitaire. Après une mobilité à la Caisse des dépôts et consignations, et un détachement à l’UAP dans le champ de l’immobilier, elle revient aux affaires sociales où elle crée la première structure de gestion de l’encadrement supérieur. Dès lors, elle œuvre à la réforme de l’Etat dans ses postes successifs dans différents ministères. Ainsi, après un poste de directrice des ressources humaines au Centre national d’art et de culture Georges Pompidou, elle rejoint le ministère de la fonction publique et le secrétariat d’Etat à la réforme de l’Etat, en qualité de chef de service, pour créer la délégation aux usagers et aux simplifications administratives et conduit l’élaboration de la première ordonnance de simplification du droit.\nDans le cadre d’un jumelage avec l’Union européenne, elle part en Roumanie, contribuer à la réforme de l’Etat roumain en vue de son intégration au sein de l’Union européenne. À son retour, elle dirige l’agence de coopération internationale du ministère du travail, de l’emploi et de la formation professionnelle. A ce titre elle signe de nombreux programmes de coopération bilatérale en ces matières, avec plusieurs pays avec lesquels la France a des relations approfondies, en Asie ou en Afrique. Son dernier poste s’est déroulé à la direction des affaires juridiques des ministères sociaux pour y conduire l’implantation du code du travail de droit commun à Mayotte. Depuis 2018, elle est à la retraite.\n\nElle est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Marie","Nom":"Agam","Photo":[{"id":"attWPaSSCnJQuvwYr","url":"https://dl.airtable.com/.attachments/7ce50930fb00aa5fb3572fb7219c41cd/ff262f1f/1.png","filename":"1.png","size":47570,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/14bf8cb113e267afc124e757c64b1ab7/073e9fa2","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/8fde9685eb8892c121206ed82aba375d/7665d23f","width":183,"height":204},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/d8762ff011af67bf1edf479fd1364725/2a5b53a5","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T20:54:30.000Z"},"fields":{"Id":1,"Ordre 8 Juillet 2020":1,"Biographie":"Marie Agam est administratrice générale des ministères sociaux. Sa scolarité à l’ENA se déroule de 1982 à 1984. Issue du concours interne en tant qu’inspectrice des impôts, elle est nommée au ministère des affaires sociales à la direction des hôpitaux. Elle s’y occupe du financement des établissements de santé et de la planification sanitaire. Après une mobilité à la Caisse des dépôts et consignations, et un détachement à l’UAP dans le champ de l’immobilier, elle revient aux affaires sociales où elle crée la première structure de gestion de l’encadrement supérieur. Dès lors, elle œuvre à la réforme de l’Etat dans ses postes successifs dans différents ministères. Ainsi, après un poste de directrice des ressources humaines au Centre national d’art et de culture Georges Pompidou, elle rejoint le ministère de la fonction publique et le secrétariat d’Etat à la réforme de l’Etat, en qualité de chef de service, pour créer la délégation aux usagers et aux simplifications administratives et conduit l’élaboration de la première ordonnance de simplification du droit.\nDans le cadre d’un jumelage avec l’Union européenne, elle part en Roumanie, contribuer à la réforme de l’Etat roumain en vue de son intégration au sein de l’Union européenne. À son retour, elle dirige l’agence de coopération internationale du ministère du travail, de l’emploi et de la formation professionnelle. A ce titre elle signe de nombreux programmes de coopération bilatérale en ces matières, avec plusieurs pays avec lesquels la France a des relations approfondies, en Asie ou en Afrique. Son dernier poste s’est déroulé à la direction des affaires juridiques des ministères sociaux pour y conduire l’implantation du code du travail de droit commun à Mayotte. Depuis 2018, elle est à la retraite.\n\nElle est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Marie","Nom":"Agam","Photo":[{"id":"attWPaSSCnJQuvwYr","url":"https://dl.airtable.com/.attachments/7ce50930fb00aa5fb3572fb7219c41cd/ff262f1f/1.png","filename":"1.png","size":47570,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/14bf8cb113e267afc124e757c64b1ab7/073e9fa2","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/8fde9685eb8892c121206ed82aba375d/7665d23f","width":183,"height":204},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/d8762ff011af67bf1edf479fd1364725/2a5b53a5","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
                 }
             }
         },
-        methods: {
-            loadData: function () {
-                var order = 3
-                var url = "https://us-central1-interet-general-net.cloudfunctions.net/getMemberInfo?order=" + order
-                getData(url).then(function (record) {
-                    app.record = JSON.parse(record)
-                    app.imageLink = app.record.fields.Photo[0].thumbnails.large.url
-                    console.log(imageLink)
-                })
-                    .catch(function (error) {
-                        console.log(error)
-                    })
-            }
-        },
         created: function () {
-            this.loadData()
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
         }
+
     })
 </script>
 

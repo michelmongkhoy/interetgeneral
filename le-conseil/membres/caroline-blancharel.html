@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Caroline Blancharel - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Caroline Blancharel - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Caroline Blancharel - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recAUYaxsotlxE2cx","_rawJson":{"id":"recAUYaxsotlxE2cx","fields":{"Id":30,"Ordre 8 Juillet 2020":30,"Biographie":"Caroline Blancharel (pseudonyme) est économiste, ancienne élève des deux grandes écoles d’ingénieurs et docteure en économie. \n\nSes travaux portent notamment sur l'économie du logement et de l'environnement. Elle a eu en parallèle diverses expériences au sein d'administrations d'État qui lui procurent une vision transverse de l'action publique. Elle est également proche du collectif “Les Infiltrés”.\n","Prénom":"Caroline","Nom":"Blancharel","Photo":[{"id":"attNZYXBDFKXOPhAu","url":"https://dl.airtable.com/.attachments/3e667a36726be50e65b0725261f097b8/d0d7a6ac/30.png","filename":"30.png","size":4642,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/0e455df44f3b77a7e856606a15f40d3e/abe820f2","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/f0c17d4617fffa9c6a27998f52382cfd/76624916","width":105,"height":119},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/d5cc14903cd5a624c4db5d67e76ff3bf/e2964c29","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":30,"Ordre 8 Juillet 2020":30,"Biographie":"Caroline Blancharel (pseudonyme) est économiste, ancienne élève des deux grandes écoles d’ingénieurs et docteure en économie. \n\nSes travaux portent notamment sur l'économie du logement et de l'environnement. Elle a eu en parallèle diverses expériences au sein d'administrations d'État qui lui procurent une vision transverse de l'action publique. Elle est également proche du collectif “Les Infiltrés”.\n","Prénom":"Caroline","Nom":"Blancharel","Photo":[{"id":"attNZYXBDFKXOPhAu","url":"https://dl.airtable.com/.attachments/3e667a36726be50e65b0725261f097b8/d0d7a6ac/30.png","filename":"30.png","size":4642,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/0e455df44f3b77a7e856606a15f40d3e/abe820f2","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/f0c17d4617fffa9c6a27998f52382cfd/76624916","width":105,"height":119},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/d5cc14903cd5a624c4db5d67e76ff3bf/e2964c29","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

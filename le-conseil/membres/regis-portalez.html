@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Régis Portalez - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Régis Portalez - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Régis Portalez - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recQLhdEZSMBIvJiB","_rawJson":{"id":"recQLhdEZSMBIvJiB","fields":{"Id":25,"Ordre 8 Juillet 2020":25,"Biographie":"Régis Portalez est ingénieur en informatique, ancien élève de l'École Polytechnique. Expert en javascript/ typescript, il quitte Microsoft en 2014 pour une TPE française d'accélération de code natif en tant qu’ingénieur de recherche. Il prend la parole place de la République fin novembre 2018 et lance un appel aux anciens élèves «Nous, anciens élèves de Polytechnique, on doit tout à la République. Il est temps pour nous de rendre au peuple ce qu'il nous a donné. Camarades de l'école : choisissez de quel côté de l'Histoire vous voulez être aujourd'hui.» Joignant le geste à la parole il rejoint les Gilets Jaunes le 1er décembre en grande tenue de l'école.\n\nIl a co-fondé en 2019 le groupe X-Alternative, qui réunit majoritairement des élèves et anciens élèves de l’École Polytechnique. Il a également participé à l'ouvrage collectif _[Résistons ensemble, pour que renaissent des jours heureux][1] _(éditions Massot, 2020).\n\n  [1]: https://massot.com/collections/resistons-ensemble-pour-que-renaissent-des-jours-heureux/\n","Prénom":"Régis","Nom":"Portalez","Photo":[{"id":"attg2aYeHULOEokyg","url":"https://dl.airtable.com/.attachments/6abcfced9b217a68e6c0c9588cdbbb44/a7d486e1/25.png","filename":"25.png","size":65273,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/375f236111a4663d39b29191f1fd917e/1edb4ec8","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/50618913cb3590129b85b8f511c3740e/d0c0c7b5","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/8a2f4efdcf5a24ebe19e1cc5adbc9b31/98b87f7d","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":25,"Ordre 8 Juillet 2020":25,"Biographie":"Régis Portalez est ingénieur en informatique, ancien élève de l'École Polytechnique. Expert en javascript/ typescript, il quitte Microsoft en 2014 pour une TPE française d'accélération de code natif en tant qu’ingénieur de recherche. Il prend la parole place de la République fin novembre 2018 et lance un appel aux anciens élèves «Nous, anciens élèves de Polytechnique, on doit tout à la République. Il est temps pour nous de rendre au peuple ce qu'il nous a donné. Camarades de l'école : choisissez de quel côté de l'Histoire vous voulez être aujourd'hui.» Joignant le geste à la parole il rejoint les Gilets Jaunes le 1er décembre en grande tenue de l'école.\n\nIl a co-fondé en 2019 le groupe X-Alternative, qui réunit majoritairement des élèves et anciens élèves de l’École Polytechnique. Il a également participé à l'ouvrage collectif _[Résistons ensemble, pour que renaissent des jours heureux][1] _(éditions Massot, 2020).\n\n  [1]: https://massot.com/collections/resistons-ensemble-pour-que-renaissent-des-jours-heureux/\n","Prénom":"Régis","Nom":"Portalez","Photo":[{"id":"attg2aYeHULOEokyg","url":"https://dl.airtable.com/.attachments/6abcfced9b217a68e6c0c9588cdbbb44/a7d486e1/25.png","filename":"25.png","size":65273,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/375f236111a4663d39b29191f1fd917e/1edb4ec8","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/50618913cb3590129b85b8f511c3740e/d0c0c7b5","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/8a2f4efdcf5a24ebe19e1cc5adbc9b31/98b87f7d","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

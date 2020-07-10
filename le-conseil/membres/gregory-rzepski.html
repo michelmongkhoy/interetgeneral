@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Grégory Rzepski - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Grégory Rzepski - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Grégory Rzepski - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recimKZfu2wuKyLtJ","_rawJson":{"id":"recimKZfu2wuKyLtJ","fields":{"Id":29,"Ordre 8 Juillet 2020":29,"Biographie":"Grégory Rzepski est haut fonctionnaire, ancien élève de l’École nationale des travaux publics de l’État et de l’ENA (promotion Jean-Jacques Rousseau). Il a travaillé dans différents ministères et au sein de plusieurs juridictions, notamment au Conseil d'État.\n\nIl est membre du comité de rédaction de la revue L’Intérêt général et collaborateur du Monde diplomatique. Il est aussi l’auteur, avec Mathias Reymond, de Tous les médias sont-ils de droite ? Du journalisme par temps d'élection présidentielle (Syllepse, 2008).\n","Prénom":"Grégory","Nom":"Rzepski","Photo":[{"id":"att918W2lwnKFaOak","url":"https://dl.airtable.com/.attachments/efd0138283760e5f86d56e1b21684b22/10f790d3/29.png","filename":"29.png","size":55293,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/7420f0cb468beea6e3ecf69a3c8c795e/a289396e","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/bcb5035f177baaf4940b13087c2cf1af/adf0d6b6","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/17bc6a0fdfb5a59460cccaf836686b35/e4189ad6","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":29,"Ordre 8 Juillet 2020":29,"Biographie":"Grégory Rzepski est haut fonctionnaire, ancien élève de l’École nationale des travaux publics de l’État et de l’ENA (promotion Jean-Jacques Rousseau). Il a travaillé dans différents ministères et au sein de plusieurs juridictions, notamment au Conseil d'État.\n\nIl est membre du comité de rédaction de la revue L’Intérêt général et collaborateur du Monde diplomatique. Il est aussi l’auteur, avec Mathias Reymond, de Tous les médias sont-ils de droite ? Du journalisme par temps d'élection présidentielle (Syllepse, 2008).\n","Prénom":"Grégory","Nom":"Rzepski","Photo":[{"id":"att918W2lwnKFaOak","url":"https://dl.airtable.com/.attachments/efd0138283760e5f86d56e1b21684b22/10f790d3/29.png","filename":"29.png","size":55293,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/7420f0cb468beea6e3ecf69a3c8c795e/a289396e","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/bcb5035f177baaf4940b13087c2cf1af/adf0d6b6","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/17bc6a0fdfb5a59460cccaf836686b35/e4189ad6","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

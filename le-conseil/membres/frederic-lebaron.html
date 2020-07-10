@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Frédéric Lebaron - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Frédéric Lebaron - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Frédéric Lebaron - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recMixyg7sJLpkkNc","_rawJson":{"id":"recMixyg7sJLpkkNc","fields":{"Id":19,"Ordre 8 Juillet 2020":19,"Biographie":"Frédéric Lebaron est professeur de sociologie à l’Ecole normale supérieure Paris-Saclay, où il dirige le département de sciences sociales.\nIl enseigne aussi à Sciences Po Saint-Germain-en- Laye, à Sorbonne Université et à Sciences Po Aix. Il est membre de l'IDHES-Paris-Saclay, chercheur associé au laboratoire Printemps (UMR CNRS-UVSQ 8085) et au CURAPP-ESS.\n\nFrédéric Lebaron a été président de l’Association française de sociologie entre 2015 et 2017. Il a publié de nombreux ouvrages et des manuels.\n","Prénom":"Frédéric","Nom":"Lebaron","Photo":[{"id":"att9djuxWp6XeaGMb","url":"https://dl.airtable.com/.attachments/ee748e5047ccf2ce4e0b0edb6399ef68/ebaa80ea/19.png","filename":"19.png","size":59731,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/a9456d7eca687c47e03a868a10662ef5/c419d40a","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/3c432a8a23254c4c88145f9400db1c7c/41d83889","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/af532d72d93b40ed516dc0d157655833/6ce22c33","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":19,"Ordre 8 Juillet 2020":19,"Biographie":"Frédéric Lebaron est professeur de sociologie à l’Ecole normale supérieure Paris-Saclay, où il dirige le département de sciences sociales.\nIl enseigne aussi à Sciences Po Saint-Germain-en- Laye, à Sorbonne Université et à Sciences Po Aix. Il est membre de l'IDHES-Paris-Saclay, chercheur associé au laboratoire Printemps (UMR CNRS-UVSQ 8085) et au CURAPP-ESS.\n\nFrédéric Lebaron a été président de l’Association française de sociologie entre 2015 et 2017. Il a publié de nombreux ouvrages et des manuels.\n","Prénom":"Frédéric","Nom":"Lebaron","Photo":[{"id":"att9djuxWp6XeaGMb","url":"https://dl.airtable.com/.attachments/ee748e5047ccf2ce4e0b0edb6399ef68/ebaa80ea/19.png","filename":"19.png","size":59731,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/a9456d7eca687c47e03a868a10662ef5/c419d40a","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/3c432a8a23254c4c88145f9400db1c7c/41d83889","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/af532d72d93b40ed516dc0d157655833/6ce22c33","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

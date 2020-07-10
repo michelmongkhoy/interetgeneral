@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Clémence Guetté - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Clémence Guetté - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Clémence Guetté - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recp8S74oSKBKtbdt","_rawJson":{"id":"recp8S74oSKBKtbdt","fields":{"Id":14,"Ordre 8 Juillet 2020":14,"Biographie":"Clémence Guetté est secrétaire générale du groupe parlementaire de la France insoumise à l’Assemblée nationale depuis juin 2017. Après des études de sociologie politique à Sciences Po et d’écologie à AgroParisTech, elle s’est engagée dans la voie de la recherche sur les inégalités sociales et environnementales. En 2016, elle a ainsi étudié la prise en compte de la vulnérabilité énergétique liée à la mobilité à l'Institut du développement durable et des relations internationales (Iddri), question devenue centrale grâce aux gilets jaunes en 2018. Sociologue des politiques publiques, elle a également mené différentes enquêtes pour des acteurs publics (sur la construction institutionnelle des politiques environnementales au Ministère de la transition écologique) et associatifs (sur l’élaboration d’un positionnement sur les violences conjugales à la Fédération des acteurs de la solidarité).\nEngagée à la France insoumise, elle est co- responsable de l’espace du programme du mouvement depuis 2019, après avoir été en charge du travail programmatique durant la campagne de Jean- Luc Mélenchon en 2017. Elle a ainsi participé à l’élaboration collective du programme l’_Avenir en commun_ et à la rédaction des livrets thématiques, ainsi qu’à la coordination des universités populaires et des groupes de travail constitués.\n\nElle est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Clémence","Nom":"Guetté","Photo":[{"id":"attRQZfOGdiSuptVp","url":"https://dl.airtable.com/.attachments/547848f5f0b88361567c59497ee0214e/7b05a124/14.png","filename":"14.png","size":68139,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/013a1bd67a6fdda74d5f4cbba21840a2/2ad03838","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/ecc0853e7e82365bd3addde81400d845/47f883b3","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/08866fc0cc9727cf63a99855974351a7/df412d7c","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":14,"Ordre 8 Juillet 2020":14,"Biographie":"Clémence Guetté est secrétaire générale du groupe parlementaire de la France insoumise à l’Assemblée nationale depuis juin 2017. Après des études de sociologie politique à Sciences Po et d’écologie à AgroParisTech, elle s’est engagée dans la voie de la recherche sur les inégalités sociales et environnementales. En 2016, elle a ainsi étudié la prise en compte de la vulnérabilité énergétique liée à la mobilité à l'Institut du développement durable et des relations internationales (Iddri), question devenue centrale grâce aux gilets jaunes en 2018. Sociologue des politiques publiques, elle a également mené différentes enquêtes pour des acteurs publics (sur la construction institutionnelle des politiques environnementales au Ministère de la transition écologique) et associatifs (sur l’élaboration d’un positionnement sur les violences conjugales à la Fédération des acteurs de la solidarité).\nEngagée à la France insoumise, elle est co- responsable de l’espace du programme du mouvement depuis 2019, après avoir été en charge du travail programmatique durant la campagne de Jean- Luc Mélenchon en 2017. Elle a ainsi participé à l’élaboration collective du programme l’_Avenir en commun_ et à la rédaction des livrets thématiques, ainsi qu’à la coordination des universités populaires et des groupes de travail constitués.\n\nElle est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Clémence","Nom":"Guetté","Photo":[{"id":"attRQZfOGdiSuptVp","url":"https://dl.airtable.com/.attachments/547848f5f0b88361567c59497ee0214e/7b05a124/14.png","filename":"14.png","size":68139,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/013a1bd67a6fdda74d5f4cbba21840a2/2ad03838","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/ecc0853e7e82365bd3addde81400d845/47f883b3","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/08866fc0cc9727cf63a99855974351a7/df412d7c","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

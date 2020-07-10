@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Bernard Cassen - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Bernard Cassen - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Bernard Cassen - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recmZTfsxPz0vIjgg","_rawJson":{"id":"recmZTfsxPz0vIjgg","fields":{"Id":5,"Ordre 8 Juillet 2020":5,"Biographie":"Bernard Cassen est professeur émérite de l’Université Paris 8 et ancien directeur général du _Monde diplomatique._\nIl est une des figures marquantes du mouvement altermondialiste, tant en France qu’au niveau international. Il a été le premier président de l'association Attac, de 1998 à 2002, avant d'en devenir président d’honneur au côté d'Ignacio Ramonet.\nIl a joué un rôle majeur dans la conception et le lancement du premier Forum social mondial (FSM) à Porto Alegre (Brésil) en janvier 2001, comme dans les FSM et Forums sociaux européens qui lui ont succédé partout dans le monde.\nBernard Cassen est également secrétaire général de la Maison de l’Amérique latine à Paris, et secrétaire général de l’association Mémoire des luttes.\n\nll est l’auteur de nombreux ouvrages sur l’altermondialisme, l’Europe et la francophonie, notamment _Tout a commencé à Porto Alegre_ (Editions Mille et Une Nuits, 2003), _Le Parlement européen, pour faire quoi ?_ avec Louis Weber et Hélène Michel (Éditions du Croquant, 2014) et _En finir avec l'eurolibéralisme_ (éditions Mille et Une Nuits, 2008).\n","Prénom":"Bernard","Nom":"Cassen","Photo":[{"id":"attdLIytMcaU1nGnR","url":"https://dl.airtable.com/.attachments/864c32961710aa7a57cdb8b71d84dd66/7991b04c/5.png","filename":"5.png","size":59923,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/2cd37d3e22ffbfe2647657a67a69c015/c5365aa0","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/32bc7ab116c3119246bcee78fa57e1c1/0cd8d3b4","width":183,"height":203},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/39013a50c8a26b268d5e93417cba4a71/27c66d92","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":5,"Ordre 8 Juillet 2020":5,"Biographie":"Bernard Cassen est professeur émérite de l’Université Paris 8 et ancien directeur général du _Monde diplomatique._\nIl est une des figures marquantes du mouvement altermondialiste, tant en France qu’au niveau international. Il a été le premier président de l'association Attac, de 1998 à 2002, avant d'en devenir président d’honneur au côté d'Ignacio Ramonet.\nIl a joué un rôle majeur dans la conception et le lancement du premier Forum social mondial (FSM) à Porto Alegre (Brésil) en janvier 2001, comme dans les FSM et Forums sociaux européens qui lui ont succédé partout dans le monde.\nBernard Cassen est également secrétaire général de la Maison de l’Amérique latine à Paris, et secrétaire général de l’association Mémoire des luttes.\n\nll est l’auteur de nombreux ouvrages sur l’altermondialisme, l’Europe et la francophonie, notamment _Tout a commencé à Porto Alegre_ (Editions Mille et Une Nuits, 2003), _Le Parlement européen, pour faire quoi ?_ avec Louis Weber et Hélène Michel (Éditions du Croquant, 2014) et _En finir avec l'eurolibéralisme_ (éditions Mille et Une Nuits, 2008).\n","Prénom":"Bernard","Nom":"Cassen","Photo":[{"id":"attdLIytMcaU1nGnR","url":"https://dl.airtable.com/.attachments/864c32961710aa7a57cdb8b71d84dd66/7991b04c/5.png","filename":"5.png","size":59923,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/2cd37d3e22ffbfe2647657a67a69c015/c5365aa0","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/32bc7ab116c3119246bcee78fa57e1c1/0cd8d3b4","width":183,"height":203},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/39013a50c8a26b268d5e93417cba4a71/27c66d92","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

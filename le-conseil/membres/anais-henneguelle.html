@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Anaïs Henneguelle - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Anaïs Henneguelle - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Anaïs Henneguelle - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"rec6RBdr8CvgCNBXs","_rawJson":{"id":"rec6RBdr8CvgCNBXs","fields":{"Id":15,"Ordre 8 Juillet 2020":15,"Biographie":"Ancienne élève de l'École normale supérieure de Paris-Saclay, agrégée de sciences économiques et sociales, Anaïs Henneguelle est aujourd'hui maîtresse de conférences en économie à l'université de Rennes 2 et chercheuse associée à l'ENS de Paris-Saclay. Spécialisée dans le domaine de l'économie politique, ses travaux portent notamment sur les politiques judiciaires et pénitentiaires. Ils adoptent un regard large en empruntant aux outils de l'économie mais également des autres sciences sociales comme la sociologie. Elle s'intéresse ainsi particulièrement aux outils et aux effets de la quantification dans les politiques publiques. \n\nAnaïs Henneguelle  fait partie du collectif d'animation des Économistes Atterrés, groupe qui défend l'idée selon laquelle d'autres politiques économiques sont possibles.\n","Prénom":"Anaïs","Nom":"Henneguelle","Photo":[{"id":"attnpOrT8TwpEsegV","url":"https://dl.airtable.com/.attachments/9dd83f313a5da2072bcb184437494c14/21bb74aa/15.png","filename":"15.png","size":59796,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/b9622e50864b7ad135d8cf85faf5e178/0bbb9b82","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/58f548c24bae3fd2d62bded8f5392546/83e9135a","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/fd9299a5504b057ef0bb89b434c47c5b/8a8c978d","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":15,"Ordre 8 Juillet 2020":15,"Biographie":"Ancienne élève de l'École normale supérieure de Paris-Saclay, agrégée de sciences économiques et sociales, Anaïs Henneguelle est aujourd'hui maîtresse de conférences en économie à l'université de Rennes 2 et chercheuse associée à l'ENS de Paris-Saclay. Spécialisée dans le domaine de l'économie politique, ses travaux portent notamment sur les politiques judiciaires et pénitentiaires. Ils adoptent un regard large en empruntant aux outils de l'économie mais également des autres sciences sociales comme la sociologie. Elle s'intéresse ainsi particulièrement aux outils et aux effets de la quantification dans les politiques publiques. \n\nAnaïs Henneguelle  fait partie du collectif d'animation des Économistes Atterrés, groupe qui défend l'idée selon laquelle d'autres politiques économiques sont possibles.\n","Prénom":"Anaïs","Nom":"Henneguelle","Photo":[{"id":"attnpOrT8TwpEsegV","url":"https://dl.airtable.com/.attachments/9dd83f313a5da2072bcb184437494c14/21bb74aa/15.png","filename":"15.png","size":59796,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/b9622e50864b7ad135d8cf85faf5e178/0bbb9b82","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/58f548c24bae3fd2d62bded8f5392546/83e9135a","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/fd9299a5504b057ef0bb89b434c47c5b/8a8c978d","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Jihen Chandoul - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Jihen Chandoul - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Jihen Chandoul - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recTXq00WwUnN1fZ4","_rawJson":{"id":"recTXq00WwUnN1fZ4","fields":{"Id":6,"Ordre 8 Juillet 2020":6,"Biographie":"Jihen Chandoul est économiste diplômée de l’Institut d’études politiques de Strasbourg. Elle co-fondatrice de l’Observatoire Tunisien de l’Economie (OTE) crée en 2013 à la suite du processus révolutionnaire en Tunisie où elle a travaillé en tant que Directrice des Etudes qualitative et du Plaidoyer. \nSpécialisée en économie politique et économie du développement, elle est l’autruice de plusieurs publications et travaux en particulier sur la dette extérieure publique et les conditionnalités des institutions financières internationales, la justice fiscale, le commerce et les accords de libre échange, les politiques d’austérité du FMI, les partenariats public-privés et les politiques d’investissements:   _‘[ALECA et agriculture : au-delà des barrières tarifaires][1]’,  [Evaluation de l’impact des politiques tunisiennes et européennes sur les exportations de l’huile d’olive tunisienne vers l’UE][2], [Le FMI en Tunisie : Injustices transitionnelles][3]_. Elle est également l'autrice d’une Op-ed publiée par le Guardian en 2018 _[The IMF has choked Tunisia. No wonder the people are protesting][4]_ qui a entraîné [une_ réponse du FMI_][5] sur la Tunisie. \nActive au sein de plusieurs réseaux dans la région Moyen orient et Afrique du nord et au niveau africain avec _Tax Justice Network Africa_, elle a également enseigné l’économie politique à la _Tunis Business School_ de l’Université de Tunis et a travaillé en tant que consultante auprès de différentes organisations internationales.\n\n  [1]: http://www.economie-tunisie.org/fr/observatoire/aleca-et-agriculture-au-dela-des-barrières-tarifaires\n  [2]: http://www.economie-tunisie.org/fr/observatoire/wwweconomie-tunisieorg-evaluation-de-limpact-des-politiques\n  [3]: http://www.economie-tunisie.org/fr/observatoire/analysiseconomics/tunisie-et-fmi-injustices-transitionnelles\n  [4]: https://www.theguardian.com/commentisfree/2018/jan/17/imf-tunisia-people-rioting-2011-economic-reforms\n  [5]: https://www.imf.org/en/News/Articles/2018/01/18/vc01182018-response-to-guardian-article\n","Prénom":"Jihen","Nom":"Chandoul","Photo":[{"id":"attyDk9qJT1fi5yzN","url":"https://dl.airtable.com/.attachments/854eec66b4676ab8c2dc9227833fd7b2/48d40611/Johen.png","filename":"Johen.png","size":53826,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/c0f8533272ae47c549ae806e3d07116e/c26bb21e","width":31,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/1ce5baa089deb9917774c0c46c3eca51/1f391cd6","width":183,"height":213},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/eb51eba8f2c02c54213336e68c924718/bc8fb93d","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":6,"Ordre 8 Juillet 2020":6,"Biographie":"Jihen Chandoul est économiste diplômée de l’Institut d’études politiques de Strasbourg. Elle co-fondatrice de l’Observatoire Tunisien de l’Economie (OTE) crée en 2013 à la suite du processus révolutionnaire en Tunisie où elle a travaillé en tant que Directrice des Etudes qualitative et du Plaidoyer. \nSpécialisée en économie politique et économie du développement, elle est l’autruice de plusieurs publications et travaux en particulier sur la dette extérieure publique et les conditionnalités des institutions financières internationales, la justice fiscale, le commerce et les accords de libre échange, les politiques d’austérité du FMI, les partenariats public-privés et les politiques d’investissements:   _‘[ALECA et agriculture : au-delà des barrières tarifaires][1]’,  [Evaluation de l’impact des politiques tunisiennes et européennes sur les exportations de l’huile d’olive tunisienne vers l’UE][2], [Le FMI en Tunisie : Injustices transitionnelles][3]_. Elle est également l'autrice d’une Op-ed publiée par le Guardian en 2018 _[The IMF has choked Tunisia. No wonder the people are protesting][4]_ qui a entraîné [une_ réponse du FMI_][5] sur la Tunisie. \nActive au sein de plusieurs réseaux dans la région Moyen orient et Afrique du nord et au niveau africain avec _Tax Justice Network Africa_, elle a également enseigné l’économie politique à la _Tunis Business School_ de l’Université de Tunis et a travaillé en tant que consultante auprès de différentes organisations internationales.\n\n  [1]: http://www.economie-tunisie.org/fr/observatoire/aleca-et-agriculture-au-dela-des-barrières-tarifaires\n  [2]: http://www.economie-tunisie.org/fr/observatoire/wwweconomie-tunisieorg-evaluation-de-limpact-des-politiques\n  [3]: http://www.economie-tunisie.org/fr/observatoire/analysiseconomics/tunisie-et-fmi-injustices-transitionnelles\n  [4]: https://www.theguardian.com/commentisfree/2018/jan/17/imf-tunisia-people-rioting-2011-economic-reforms\n  [5]: https://www.imf.org/en/News/Articles/2018/01/18/vc01182018-response-to-guardian-article\n","Prénom":"Jihen","Nom":"Chandoul","Photo":[{"id":"attyDk9qJT1fi5yzN","url":"https://dl.airtable.com/.attachments/854eec66b4676ab8c2dc9227833fd7b2/48d40611/Johen.png","filename":"Johen.png","size":53826,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/c0f8533272ae47c549ae806e3d07116e/c26bb21e","width":31,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/1ce5baa089deb9917774c0c46c3eca51/1f391cd6","width":183,"height":213},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/eb51eba8f2c02c54213336e68c924718/bc8fb93d","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

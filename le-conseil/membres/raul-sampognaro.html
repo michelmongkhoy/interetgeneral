@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Raul Sampognaro - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Raul Sampognaro - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Raul Sampognaro - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"reczBZOtM92oJfzBv","_rawJson":{"id":"reczBZOtM92oJfzBv","fields":{"Id":31,"Ordre 8 Juillet 2020":31,"Biographie":"Raul Sampognaro est chercheur en économie à Sciences Po-Paris. \nDiplômé de l’Université Paris 1 (Panthéon-Sorbonne) avec une spécialisation en économie internationale. Après une expérience professionnelle au Ministère des Finances, il retourne au monde académique à Sciences Po. Spécialiste sur les questions de finances publiques en France et dans la zone euro, il participe à plusieurs ouvrages collectifs portant sur les réformes du cadre institutionnel européen, notamment des règles budgétaires en vigueur. \nPar ailleurs, il participe activement à l’évaluation des politiques publiques. Ses travaux de recherche portent aussi sur l’évolution récente des inégalités et du système de protection sociale.\n","Prénom":"Raul","Nom":"Sampognaro","Photo":[{"id":"attp5LE8TuJSDg6lw","url":"https://dl.airtable.com/.attachments/9063f234b880b16d60a6cd9f9c4c3b30/8a6ac7cb/31.png","filename":"31.png","size":58396,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/bd68b5f8d997951214b01ae507c6cf5d/56f97b83","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/068257c87f1a8de8e27fa355b5f504cd/c6fed0ed","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/2c4fc70e79bb003cd1c7ffe68c4da1d8/fce702d4","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":31,"Ordre 8 Juillet 2020":31,"Biographie":"Raul Sampognaro est chercheur en économie à Sciences Po-Paris. \nDiplômé de l’Université Paris 1 (Panthéon-Sorbonne) avec une spécialisation en économie internationale. Après une expérience professionnelle au Ministère des Finances, il retourne au monde académique à Sciences Po. Spécialiste sur les questions de finances publiques en France et dans la zone euro, il participe à plusieurs ouvrages collectifs portant sur les réformes du cadre institutionnel européen, notamment des règles budgétaires en vigueur. \nPar ailleurs, il participe activement à l’évaluation des politiques publiques. Ses travaux de recherche portent aussi sur l’évolution récente des inégalités et du système de protection sociale.\n","Prénom":"Raul","Nom":"Sampognaro","Photo":[{"id":"attp5LE8TuJSDg6lw","url":"https://dl.airtable.com/.attachments/9063f234b880b16d60a6cd9f9c4c3b30/8a6ac7cb/31.png","filename":"31.png","size":58396,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/bd68b5f8d997951214b01ae507c6cf5d/56f97b83","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/068257c87f1a8de8e27fa355b5f504cd/c6fed0ed","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/2c4fc70e79bb003cd1c7ffe68c4da1d8/fce702d4","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

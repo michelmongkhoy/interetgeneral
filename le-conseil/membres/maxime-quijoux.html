@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Maxime Quijoux - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Maxime Quijoux - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Maxime Quijoux - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recJ8d4dFmNK6nVrW","_rawJson":{"id":"recJ8d4dFmNK6nVrW","fields":{"Id":26,"Ordre 8 Juillet 2020":26,"Biographie":"Maxime Quijoux est sociologue, chargé de recherche au CNRS et membre du Laboratoire Interdisciplinaire pour la Sociologie économique (LISE) au Conservatoire national des Arts et Métiers (CNAM). Titulaire d'un doctorat de sociologie obtenu en 2009 à l'Institut des Hautes études de l'Amérique Latine (IHEAL, Paris 3 Sorbonne Nouvelle), il consacre ses travaux à la démocratie au travail, au syndicalisme et aux socialisations professionnelles.\nIl est l'auteur de _Néolibéralisme et autogestion, l'expérience argentine_ (Éditions de l’IHEAL, 2011) et de _Adieux au patronat, lutte et gestion ouvrières dans une usine reprise en coopérative_ (Éditions Le Croquant, 2018). Il a également dirigé l'ouvrage _Bourdieu et le travail_ paru en 2015 aux éditions Presses Universitaires de Rennes. \n\nSes recherches actuelles portent sur le mouvement coopératif de production en France et sur le mouvement social européen porté par Pierre Bourdieu dans les années 1990.\n","Prénom":"Maxime","Nom":"Quijoux","Photo":[{"id":"attyPNgEAyfCbVp0y","url":"https://dl.airtable.com/.attachments/556883e88a8a3ed9025bcd1b12826eac/9bffc85e/26.png","filename":"26.png","size":62480,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/03da254aef222d15cf5e41e42e94e92e/af2ae277","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/49d8ad46e3cc7c1ebd281f17e80e16ec/e3b7b582","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/723431846c6d6490878c502dc4866e08/9c977f29","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":26,"Ordre 8 Juillet 2020":26,"Biographie":"Maxime Quijoux est sociologue, chargé de recherche au CNRS et membre du Laboratoire Interdisciplinaire pour la Sociologie économique (LISE) au Conservatoire national des Arts et Métiers (CNAM). Titulaire d'un doctorat de sociologie obtenu en 2009 à l'Institut des Hautes études de l'Amérique Latine (IHEAL, Paris 3 Sorbonne Nouvelle), il consacre ses travaux à la démocratie au travail, au syndicalisme et aux socialisations professionnelles.\nIl est l'auteur de _Néolibéralisme et autogestion, l'expérience argentine_ (Éditions de l’IHEAL, 2011) et de _Adieux au patronat, lutte et gestion ouvrières dans une usine reprise en coopérative_ (Éditions Le Croquant, 2018). Il a également dirigé l'ouvrage _Bourdieu et le travail_ paru en 2015 aux éditions Presses Universitaires de Rennes. \n\nSes recherches actuelles portent sur le mouvement coopératif de production en France et sur le mouvement social européen porté par Pierre Bourdieu dans les années 1990.\n","Prénom":"Maxime","Nom":"Quijoux","Photo":[{"id":"attyPNgEAyfCbVp0y","url":"https://dl.airtable.com/.attachments/556883e88a8a3ed9025bcd1b12826eac/9bffc85e/26.png","filename":"26.png","size":62480,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/03da254aef222d15cf5e41e42e94e92e/af2ae277","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/49d8ad46e3cc7c1ebd281f17e80e16ec/e3b7b582","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/723431846c6d6490878c502dc4866e08/9c977f29","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

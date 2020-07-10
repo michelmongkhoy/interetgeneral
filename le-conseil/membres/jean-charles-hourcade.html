@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Jean-Charles Hourcade - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Jean-Charles Hourcade - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Jean-Charles Hourcade - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recOfmIXhkr7ddbbA","_rawJson":{"id":"recOfmIXhkr7ddbbA","fields":{"Id":17,"Ordre 8 Juillet 2020":17,"Biographie":"Jean-Charles Hourcade est ingénieur, ancien élève de l’École Polytechnique et de l’ENS Télécom, membre de l’Académie des Technologies.\nAu service de la recherche de l’INA dès 1981, puis au sein de la société Thomson Digital Image, Jean- Charles Hourcade se consacre au développement de logiciels d’animation et de synthèse d’images 3D. Après 7 années à la Direction de la Stratégie de Thomson-CSF (aujourd’hui Thalès), il rejoint Thomson Multimedia en 2000 en tant que Directeur de la Recherche et de l’Innovation, puis Directeur Général Adjoint en charge de la R&D, des activités Composants et Micro-électronique, et des Brevets. À la demande de l’État et de la Caisse des Dépôts, il crée en 2011 et dirige jusqu’en 2016 le fonds d’intervention public France Brevets, dont la mission est de favoriser la valorisation des brevets issus de la Recherche et de l'Industrie Françaises.\nJean-Charles Hourcade a été en charge des questions relatives à l’Industrie et aux Entreprises au sein de l’équipe de campagne de la France Insoumise en 2017. Il a co-fondé en 2019 le groupe X-Alternative, qui réunit des anciens élèves de l’École Polytechnique et d’autres écoles d’ingénieurs françaises.\n\nIl est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Jean-Charles","Nom":"Hourcade","Photo":[{"id":"attTcToUBQL1zrURA","url":"https://dl.airtable.com/.attachments/11901fa427c1d2fba61222aac0756416/db40d4c5/17.png","filename":"17.png","size":51975,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/82b5b74cb0e79bf67e42587d22f7942b/9b7bac44","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/013cc53293683323d0d329ababf0a7dc/c10b1278","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/f3ce9a18865dad8a6ab74ef99e62e4e2/cd18d2fe","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":17,"Ordre 8 Juillet 2020":17,"Biographie":"Jean-Charles Hourcade est ingénieur, ancien élève de l’École Polytechnique et de l’ENS Télécom, membre de l’Académie des Technologies.\nAu service de la recherche de l’INA dès 1981, puis au sein de la société Thomson Digital Image, Jean- Charles Hourcade se consacre au développement de logiciels d’animation et de synthèse d’images 3D. Après 7 années à la Direction de la Stratégie de Thomson-CSF (aujourd’hui Thalès), il rejoint Thomson Multimedia en 2000 en tant que Directeur de la Recherche et de l’Innovation, puis Directeur Général Adjoint en charge de la R&D, des activités Composants et Micro-électronique, et des Brevets. À la demande de l’État et de la Caisse des Dépôts, il crée en 2011 et dirige jusqu’en 2016 le fonds d’intervention public France Brevets, dont la mission est de favoriser la valorisation des brevets issus de la Recherche et de l'Industrie Françaises.\nJean-Charles Hourcade a été en charge des questions relatives à l’Industrie et aux Entreprises au sein de l’équipe de campagne de la France Insoumise en 2017. Il a co-fondé en 2019 le groupe X-Alternative, qui réunit des anciens élèves de l’École Polytechnique et d’autres écoles d’ingénieurs françaises.\n\nIl est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Jean-Charles","Nom":"Hourcade","Photo":[{"id":"attTcToUBQL1zrURA","url":"https://dl.airtable.com/.attachments/11901fa427c1d2fba61222aac0756416/db40d4c5/17.png","filename":"17.png","size":51975,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/82b5b74cb0e79bf67e42587d22f7942b/9b7bac44","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/013cc53293683323d0d329ababf0a7dc/c10b1278","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/f3ce9a18865dad8a6ab74ef99e62e4e2/cd18d2fe","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

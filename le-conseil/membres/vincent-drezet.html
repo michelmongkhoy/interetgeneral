@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Vincent Drezet - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Vincent Drezet - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Vincent Drezet - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recDhBM3zP6ef8oum","_rawJson":{"id":"recDhBM3zP6ef8oum","fields":{"Id":9,"Ordre 8 Juillet 2020":9,"Biographie":"Ancien porte-parole et secrétaire général du syndicat Solidaires Finances Publiques, premier syndicat de Bercy, Vincent Drezet est fiscaliste et membre de l’association Attac. Il a participé à l’écriture de plusieurs notes, tribunes, rapports et livres sur la fiscalité publiés par Solidaires Finances Publiques, Attac, la Fondation Copernic ou à titre personnel. Il intervient dans les médias, et régulièrement dans des colloques et soirées-débats sur le thème des finances publiques, afin d’expliquer le rôle de l’impôt, livrer une analyse critique des politiques fiscales et formuler des propositions en faveur de la justice fiscale. \n\nIl est auteur de _15 idées reçues sur la fiscalité _(Éditions Les liens qui libèrent, 2012) avec Thomas Coutrot, _Un Impôt juste pour une société juste _avec Christiane Marty (Éditions Syllepse, 2011), _Une société sans impôts ? Plaidoyer pour une fiscalité juste _(Éditions Les liens qui libèrent, 2014).\n","Prénom":"Vincent","Nom":"Drezet","Photo":[{"id":"attISusB76pH90w6u","url":"https://dl.airtable.com/.attachments/0e14e8792115b622632f0c1445069818/29d27b00/9.png","filename":"9.png","size":59181,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/cd68fbe3a6a5db1f34b77fc4b08cbe0b/ffa57265","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/d83f935615ce6dc35ee1fa5ac752c486/700072cd","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/8e14583b4a993ef38797ed04706fac5e/51e764fa","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":9,"Ordre 8 Juillet 2020":9,"Biographie":"Ancien porte-parole et secrétaire général du syndicat Solidaires Finances Publiques, premier syndicat de Bercy, Vincent Drezet est fiscaliste et membre de l’association Attac. Il a participé à l’écriture de plusieurs notes, tribunes, rapports et livres sur la fiscalité publiés par Solidaires Finances Publiques, Attac, la Fondation Copernic ou à titre personnel. Il intervient dans les médias, et régulièrement dans des colloques et soirées-débats sur le thème des finances publiques, afin d’expliquer le rôle de l’impôt, livrer une analyse critique des politiques fiscales et formuler des propositions en faveur de la justice fiscale. \n\nIl est auteur de _15 idées reçues sur la fiscalité _(Éditions Les liens qui libèrent, 2012) avec Thomas Coutrot, _Un Impôt juste pour une société juste _avec Christiane Marty (Éditions Syllepse, 2011), _Une société sans impôts ? Plaidoyer pour une fiscalité juste _(Éditions Les liens qui libèrent, 2014).\n","Prénom":"Vincent","Nom":"Drezet","Photo":[{"id":"attISusB76pH90w6u","url":"https://dl.airtable.com/.attachments/0e14e8792115b622632f0c1445069818/29d27b00/9.png","filename":"9.png","size":59181,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/cd68fbe3a6a5db1f34b77fc4b08cbe0b/ffa57265","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/d83f935615ce6dc35ee1fa5ac752c486/700072cd","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/8e14583b4a993ef38797ed04706fac5e/51e764fa","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

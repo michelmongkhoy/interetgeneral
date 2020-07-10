@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Clara Capelli - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Clara Capelli - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Clara Capelli - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recxUS2Y4EM6fTbEF","_rawJson":{"id":"recxUS2Y4EM6fTbEF","fields":{"Id":4,"Ordre 8 Juillet 2020":4,"Biographie":"Clara Capelli est économiste spécialiste de la zone Moyen Orient et Afrique du Nord et experte en coopération internationale. \nElle a soutenu en 2015 une thèse de doctorat en économie du développement à l’Université de Pavia (Italie), sur le lien entre structure productive, chaînes de valeur internationales, et emploi dans la région Moyen-orient et Afrique du nord (MENA), en s’intéressant en particulier aux cas de la Tunisie et de la Palestine. Elle a ensuite travaillé au bureau régional Afrique du Nord de la Banque africaine de développement, à Tunis, où elle s’est chargée des projets de financement des infrastructures. Clara Capelli a par la suite géré les projets de développement économique de l’Agence de coopération italienne à Jérusalem pour la Palestine. Elle a travaillé sur les politiques de coopération internationale dans la région MENA après les soulèvements de 2011, et plus récemment sur les questions de financiarisation – en particulier dans les économies en développement et avec une approche hétérodoxe. Elle enseigne l’économie à l’Université de Bethléem.\n\nClara Capelli écrit régulièrement des articles de vulgarisation des questions économiques, dans une perspective hétérodoxe, pour le [think tank italien ISPI,][1] l’[INET (Institute for New Economic Thinking)][2], [Naked Capitalism][3] et le [Bretton Woods Project][4], et surtout le magazine en ligne [Q Code ][5]\n\n  [1]: https://www.ispionline.it/en/pubblicazione/coronavirus-exposes-palestines-system-fragilities-25644\n  [2]: https://www.ineteconomics.org/perspectives/blog/tunisia-in-turmoil-when-supply-side-orthodoxy-meets-an-angry-citizenry\n  [3]: https://www.nakedcapitalism.com/2018/02/protests-in-tunisia-over-imf-promoted-policies-for-good-reason.html\n  [4]: https://www.brettonwoodsproject.org/2018/03/tunisians-take-streets-imf-imposed-austerity\n  [5]: https://www.qcodemag.it/author/clara-capelli/\n","Prénom":"Clara","Nom":"Capelli","Photo":[{"id":"att43LSBGt1J6minP","url":"https://dl.airtable.com/.attachments/0f130c2d0c7a3330672e0c4885474e08/64524692/4.png","filename":"4.png","size":65077,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/4fbf1c56b33ec75000a03b6221484a53/d1d55bc6","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/fb24e7b6e2e44282b8a1afe5aa5547d5/1e567312","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/3c7ffcfa4b2af87f022b0e003fee4cd9/83f25c33","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":4,"Ordre 8 Juillet 2020":4,"Biographie":"Clara Capelli est économiste spécialiste de la zone Moyen Orient et Afrique du Nord et experte en coopération internationale. \nElle a soutenu en 2015 une thèse de doctorat en économie du développement à l’Université de Pavia (Italie), sur le lien entre structure productive, chaînes de valeur internationales, et emploi dans la région Moyen-orient et Afrique du nord (MENA), en s’intéressant en particulier aux cas de la Tunisie et de la Palestine. Elle a ensuite travaillé au bureau régional Afrique du Nord de la Banque africaine de développement, à Tunis, où elle s’est chargée des projets de financement des infrastructures. Clara Capelli a par la suite géré les projets de développement économique de l’Agence de coopération italienne à Jérusalem pour la Palestine. Elle a travaillé sur les politiques de coopération internationale dans la région MENA après les soulèvements de 2011, et plus récemment sur les questions de financiarisation – en particulier dans les économies en développement et avec une approche hétérodoxe. Elle enseigne l’économie à l’Université de Bethléem.\n\nClara Capelli écrit régulièrement des articles de vulgarisation des questions économiques, dans une perspective hétérodoxe, pour le [think tank italien ISPI,][1] l’[INET (Institute for New Economic Thinking)][2], [Naked Capitalism][3] et le [Bretton Woods Project][4], et surtout le magazine en ligne [Q Code ][5]\n\n  [1]: https://www.ispionline.it/en/pubblicazione/coronavirus-exposes-palestines-system-fragilities-25644\n  [2]: https://www.ineteconomics.org/perspectives/blog/tunisia-in-turmoil-when-supply-side-orthodoxy-meets-an-angry-citizenry\n  [3]: https://www.nakedcapitalism.com/2018/02/protests-in-tunisia-over-imf-promoted-policies-for-good-reason.html\n  [4]: https://www.brettonwoodsproject.org/2018/03/tunisians-take-streets-imf-imposed-austerity\n  [5]: https://www.qcodemag.it/author/clara-capelli/\n","Prénom":"Clara","Nom":"Capelli","Photo":[{"id":"att43LSBGt1J6minP","url":"https://dl.airtable.com/.attachments/0f130c2d0c7a3330672e0c4885474e08/64524692/4.png","filename":"4.png","size":65077,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/4fbf1c56b33ec75000a03b6221484a53/d1d55bc6","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/fb24e7b6e2e44282b8a1afe5aa5547d5/1e567312","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/3c7ffcfa4b2af87f022b0e003fee4cd9/83f25c33","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

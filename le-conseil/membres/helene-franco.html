@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Hélène Franco - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Hélène Franco - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Hélène Franco - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"rec5lOEFfhr0sQq9J","_rawJson":{"id":"rec5lOEFfhr0sQq9J","fields":{"Id":12,"Ordre 8 Juillet 2020":12,"Biographie":"Hélène Franco est magistrate et ancienne secrétaire générale du Syndicat de la magistrature (2006 - 2008) dont elle est toujours membre active. Ancienne vice- présidente au tribunal de grande instance de Créteil, elle a été vice-présidente chargée des fonctions de juge des enfants au Tribunal de grande instance de Bobigny. En 2016, elle est nommée vice-présidente chargée de l'instruction au Tribunal de grande instance de Créteil. \n\nActuellement conseillère à la Cour d’appel de Paris, elle est membre du groupe de réflexion « Les Constituants».\n","Prénom":"Hélène","Nom":"Franco","Photo":[{"id":"att7Ws083xuerVNUs","url":"https://dl.airtable.com/.attachments/5871d764a3ff938bd19077937e6bd493/b2285a19/12.png","filename":"12.png","size":65686,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/61568da71b63f3a15782b1fda3cc31a5/416692ae","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/c90362161ff6229fe96cdc43fe5d2198/d0090540","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/b954a522ecf0b19833d29d7ad9dd81cf/1030ed2e","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":12,"Ordre 8 Juillet 2020":12,"Biographie":"Hélène Franco est magistrate et ancienne secrétaire générale du Syndicat de la magistrature (2006 - 2008) dont elle est toujours membre active. Ancienne vice- présidente au tribunal de grande instance de Créteil, elle a été vice-présidente chargée des fonctions de juge des enfants au Tribunal de grande instance de Bobigny. En 2016, elle est nommée vice-présidente chargée de l'instruction au Tribunal de grande instance de Créteil. \n\nActuellement conseillère à la Cour d’appel de Paris, elle est membre du groupe de réflexion « Les Constituants».\n","Prénom":"Hélène","Nom":"Franco","Photo":[{"id":"att7Ws083xuerVNUs","url":"https://dl.airtable.com/.attachments/5871d764a3ff938bd19077937e6bd493/b2285a19/12.png","filename":"12.png","size":65686,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/61568da71b63f3a15782b1fda3cc31a5/416692ae","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/c90362161ff6229fe96cdc43fe5d2198/d0090540","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/b954a522ecf0b19833d29d7ad9dd81cf/1030ed2e","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

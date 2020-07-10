@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Sabrina Ali Benali- Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Sabrina Ali Benali - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Sabrina Ali Benali - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recukfpXdDRk0FPN6","_rawJson":{"id":"recukfpXdDRk0FPN6","fields":{"Id":2,"Ordre 8 Juillet 2020":2,"Biographie":"Sabrina-Aurore Ali Benali est médecin. Après avoir effectué son externat et son internat dans les différents services de l’Assistance publique-Hôpitaux de Paris (AP-HP), notamment aux urgences, elle est aujourd’hui médecin d’urgence à domicile à Paris.\n\nRassemblant des millions de vues sur les réseaux sociaux, elle est l’autrice de «La Révolte d'une interne » aux éditions du Cherche midi. Elle a également participé à l'ouvrage collectif «Résistons ensemble, pour que renaissent des jours heureux» aux éditions Massot et est membre du Conseil national de la nouvelle Résistance (CNNR).\n","Prénom":"Sabrina","Nom":"Ali BenAli","Photo":[{"id":"att55ky0IW7BXupJD","url":"https://dl.airtable.com/.attachments/ebdb2b0ba8a8c27f0523d5e948d30867/648bea45/2.png","filename":"2.png","size":75006,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/aceb24f102371e4fe4654b84489855b7/ac546c8f","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/11cc930eb8b57885398688089ba5ab5c/b1d6feae","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/496d89b7de26108c0fd4d3f144f564da/9d0b4f83","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":2,"Ordre 8 Juillet 2020":2,"Biographie":"Sabrina-Aurore Ali Benali est médecin. Après avoir effectué son externat et son internat dans les différents services de l’Assistance publique-Hôpitaux de Paris (AP-HP), notamment aux urgences, elle est aujourd’hui médecin d’urgence à domicile à Paris.\n\nRassemblant des millions de vues sur les réseaux sociaux, elle est l’autrice de «La Révolte d'une interne » aux éditions du Cherche midi. Elle a également participé à l'ouvrage collectif «Résistons ensemble, pour que renaissent des jours heureux» aux éditions Massot et est membre du Conseil national de la nouvelle Résistance (CNNR).\n","Prénom":"Sabrina","Nom":"Ali BenAli","Photo":[{"id":"att55ky0IW7BXupJD","url":"https://dl.airtable.com/.attachments/ebdb2b0ba8a8c27f0523d5e948d30867/648bea45/2.png","filename":"2.png","size":75006,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/aceb24f102371e4fe4654b84489855b7/ac546c8f","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/11cc930eb8b57885398688089ba5ab5c/b1d6feae","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/496d89b7de26108c0fd4d3f144f564da/9d0b4f83","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

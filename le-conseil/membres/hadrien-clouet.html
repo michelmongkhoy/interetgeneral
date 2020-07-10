@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Hadrien Clouet - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Hadrien Clouet - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Hadrien Clouet - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recZLxjgr19w11WLY","_rawJson":{"id":"recZLxjgr19w11WLY","fields":{"Id":7,"Ordre 8 Juillet 2020":7,"Biographie":"Hadrien Clouet est sociologue, chercheur postdoctorant au Centre de sociologie des organisations (Sciences Po) et chercheur associé au Lise (Conservatoire National des Arts et Métiers). \nSpécialiste du chômage et des politiques d'emploi, il s'intéresse particulièrement à la diffusion de la précarité et aux intermédiaires publics de l'emploi, dans une perspective comparative franco-allemande. Après sa thèse de doctorat (2018) sur la promotion des offres à temps partiel par certains opérateurs publics de placement, il a conduit des enquêtes sur les conditions de travail et les conflits professionnels en milieu militaire et dans les services publics de l'eau. \n\nIl participe régulièrement à des universités populaires et à des séminaires associatifs. Actuellement, il enseigne à Sciences Po, Sorbonne université, l'IEP de Strasbourg et l'université de Reims.\n","Prénom":"Hadrien","Nom":"Clouet","Photo":[{"id":"attdKZZGv5aq3gkP8","url":"https://dl.airtable.com/.attachments/b69d6cdc9189ba0dacb9b04b5defb563/be9e5bd8/7.png","filename":"7.png","size":33383,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/77fdd9309073e0532959454f40723010/fd80660d","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/bc82b7035fb54bef0ce1f36364e1632b/de31af15","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/f8574ffdfeffe1d48ea0de1a6e05d583/dfc71c4e","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":7,"Ordre 8 Juillet 2020":7,"Biographie":"Hadrien Clouet est sociologue, chercheur postdoctorant au Centre de sociologie des organisations (Sciences Po) et chercheur associé au Lise (Conservatoire National des Arts et Métiers). \nSpécialiste du chômage et des politiques d'emploi, il s'intéresse particulièrement à la diffusion de la précarité et aux intermédiaires publics de l'emploi, dans une perspective comparative franco-allemande. Après sa thèse de doctorat (2018) sur la promotion des offres à temps partiel par certains opérateurs publics de placement, il a conduit des enquêtes sur les conditions de travail et les conflits professionnels en milieu militaire et dans les services publics de l'eau. \n\nIl participe régulièrement à des universités populaires et à des séminaires associatifs. Actuellement, il enseigne à Sciences Po, Sorbonne université, l'IEP de Strasbourg et l'université de Reims.\n","Prénom":"Hadrien","Nom":"Clouet","Photo":[{"id":"attdKZZGv5aq3gkP8","url":"https://dl.airtable.com/.attachments/b69d6cdc9189ba0dacb9b04b5defb563/be9e5bd8/7.png","filename":"7.png","size":33383,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/77fdd9309073e0532959454f40723010/fd80660d","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/bc82b7035fb54bef0ce1f36364e1632b/de31af15","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/f8574ffdfeffe1d48ea0de1a6e05d583/dfc71c4e","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

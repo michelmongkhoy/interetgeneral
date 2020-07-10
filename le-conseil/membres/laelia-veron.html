@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Laélia Véron - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Laélia Véron - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Laélia Véron - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recAOBiOBoukHDgNi","_rawJson":{"id":"recAOBiOBoukHDgNi","fields":{"Id":33,"Ordre 8 Juillet 2020":33,"Biographie":"Laélia Véron est docteure en langue et littérature française et maîtresse de Conférences en stylistique à l’université d’Orléans et membre du laboratoire POLEN (Pouvoir, Lettres, Normes). \nAgrégée de Lettres Modernes, elle est diplômée de l'ENS de Lyon. Elle intervient dans les médias (notamment à Arrêt sur images) sur la base de ses travaux portant sur le langage comme enjeu de pouvoir. \n\nElle est co-autrice de _Le Français est à nous_ ! _Petit manuel d’émancipation linguistique_ (Éditions La découverte, 2019) avec Maria Candea et créatrice du podcast Parler comme jamais ! sur Binge audio. Elle est également enseignante en milieu carcéral.\n","Prénom":"Laélia","Nom":"Véron","Photo":[{"id":"attYz6CMizY1U1saW","url":"https://dl.airtable.com/.attachments/fdc87bc9afc1583a942577a7bfc8cc47/508ff944/27.png","filename":"27.png","size":68451,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/f9f0f2776bc7872847fbbd4570bdb1a7/721d7ba8","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/2e7a906cc2ae6a3c396e8bfe60cbbf52/2ce116b3","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/67e005f95bed192ed0c1879abe559352/8712c07d","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":33,"Ordre 8 Juillet 2020":33,"Biographie":"Laélia Véron est docteure en langue et littérature française et maîtresse de Conférences en stylistique à l’université d’Orléans et membre du laboratoire POLEN (Pouvoir, Lettres, Normes). \nAgrégée de Lettres Modernes, elle est diplômée de l'ENS de Lyon. Elle intervient dans les médias (notamment à Arrêt sur images) sur la base de ses travaux portant sur le langage comme enjeu de pouvoir. \n\nElle est co-autrice de _Le Français est à nous_ ! _Petit manuel d’émancipation linguistique_ (Éditions La découverte, 2019) avec Maria Candea et créatrice du podcast Parler comme jamais ! sur Binge audio. Elle est également enseignante en milieu carcéral.\n","Prénom":"Laélia","Nom":"Véron","Photo":[{"id":"attYz6CMizY1U1saW","url":"https://dl.airtable.com/.attachments/fdc87bc9afc1583a942577a7bfc8cc47/508ff944/27.png","filename":"27.png","size":68451,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/f9f0f2776bc7872847fbbd4570bdb1a7/721d7ba8","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/2e7a906cc2ae6a3c396e8bfe60cbbf52/2ce116b3","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/67e005f95bed192ed0c1879abe559352/8712c07d","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>

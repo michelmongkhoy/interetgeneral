@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Frédéric Pierru - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="Frédéric Pierru - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Frédéric Pierru - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://unpkg.com/vue"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"recKRNHaTrNtv6wCm","_rawJson":{"id":"recKRNHaTrNtv6wCm","fields":{"Id":22,"Ordre 8 Juillet 2020":22,"Biographie":"Frédéric Pierru est sociologue et politiste, chargé de recherche hors classe au CNRS, membre du Centre d'études et de recherches administratives, politiques et sociales (CERAPS) à l’université de Lille. Il est également chercheur associé au laboratoire interdisciplinaire pour la sociologie économique du Conservatoire national des Arts et Métiers.\nIl a commencé sa carrière à l’Institut de recherche interdisciplinaire en sciences sociales (IRISSO) à l’université Paris Dauphine. Il est membre du Comité de direction de la Chaire Santé de Sciences Po Paris, ancien membre du Haut Conseil de la Santé Publique et a participé à de nombreux conseils et commissions. Il est membre de comités éditoriaux de revues académiques. Il est un spécialiste reconnu des politiques publiques de santé, allant de la Sécurité sociale aux politiques de veille et de sécurité sanitaire. \nIl a été orateur national santé du candidat Jean-Luc Mélenchon en 2016 – 2017 et intervient régulièrement dans la presse généraliste et professionnelle sur les enjeux de la réforme du système de santé. \n\nIl a écrit, seul ou en collaboration, de nombreux articles scientifiques et ouvrages dont : avec André Grimaldi, François Bourdillon, Olivier Lyon-Caen, Didier Tabuteau, Manifeste pour une santé égalitaire et solidaire, Odile Jacob, 2011 ; avec André Grimaldi, Yvanie Caillé, Didier Tabuteau, Les Maladies chroniques. La troisième médecine, Odile Jacob, 2017 ; avec Pierre-André Juven et Fanny Vincent, La Casse du siècle. A propos des réformes de l’hôpital public, Raisons d’Agir, 2019 ; avec André Grimaldi, Santé : urgence, Odile Jacob, 2020. Il a notamment participé au film La Sociale de Gilles Perret (2016).\n\nIl est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Frédéric","Nom":"Pierru","Photo":[{"id":"att52QxM6ALYUHZwR","url":"https://dl.airtable.com/.attachments/1bfeba88f0b73cc2b38630566d8d4bd5/d67390e9/22.png","filename":"22.png","size":61833,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/a0beb1aa7f51ca3b5fdc0aba099dccd2/991138e7","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/9fb6651148e7e2914d19817b11c7379f/a6905ed7","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/7153645a06a9b5629f33df68fd3026a4/35581e3b","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":22,"Ordre 8 Juillet 2020":22,"Biographie":"Frédéric Pierru est sociologue et politiste, chargé de recherche hors classe au CNRS, membre du Centre d'études et de recherches administratives, politiques et sociales (CERAPS) à l’université de Lille. Il est également chercheur associé au laboratoire interdisciplinaire pour la sociologie économique du Conservatoire national des Arts et Métiers.\nIl a commencé sa carrière à l’Institut de recherche interdisciplinaire en sciences sociales (IRISSO) à l’université Paris Dauphine. Il est membre du Comité de direction de la Chaire Santé de Sciences Po Paris, ancien membre du Haut Conseil de la Santé Publique et a participé à de nombreux conseils et commissions. Il est membre de comités éditoriaux de revues académiques. Il est un spécialiste reconnu des politiques publiques de santé, allant de la Sécurité sociale aux politiques de veille et de sécurité sanitaire. \nIl a été orateur national santé du candidat Jean-Luc Mélenchon en 2016 – 2017 et intervient régulièrement dans la presse généraliste et professionnelle sur les enjeux de la réforme du système de santé. \n\nIl a écrit, seul ou en collaboration, de nombreux articles scientifiques et ouvrages dont : avec André Grimaldi, François Bourdillon, Olivier Lyon-Caen, Didier Tabuteau, Manifeste pour une santé égalitaire et solidaire, Odile Jacob, 2011 ; avec André Grimaldi, Yvanie Caillé, Didier Tabuteau, Les Maladies chroniques. La troisième médecine, Odile Jacob, 2017 ; avec Pierre-André Juven et Fanny Vincent, La Casse du siècle. A propos des réformes de l’hôpital public, Raisons d’Agir, 2019 ; avec André Grimaldi, Santé : urgence, Odile Jacob, 2020. Il a notamment participé au film La Sociale de Gilles Perret (2016).\n\nIl est signataire du manifeste fondateur d’Intérêt général.\n","Prénom":"Frédéric","Nom":"Pierru","Photo":[{"id":"att52QxM6ALYUHZwR","url":"https://dl.airtable.com/.attachments/1bfeba88f0b73cc2b38630566d8d4bd5/d67390e9/22.png","filename":"22.png","size":61833,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/a0beb1aa7f51ca3b5fdc0aba099dccd2/991138e7","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/9fb6651148e7e2914d19817b11c7379f/a6905ed7","width":183,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/7153645a06a9b5629f33df68fd3026a4/35581e3b","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>
