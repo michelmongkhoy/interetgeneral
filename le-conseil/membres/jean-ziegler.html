@@ -58,7 +58,7 @@
 
     <div id="app">
         <article>
-            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <img :src="record.fields.Photo[0].thumbnails.large.url" alt="Jean Ziegler - Membre du conseil d'orentiation scientifique d'Intérêt Général/">
             <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
             <component :is="dynamicComponent" />
         </article>
