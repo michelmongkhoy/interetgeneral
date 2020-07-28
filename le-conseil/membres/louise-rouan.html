@@ -58,7 +58,6 @@
 
     <div id="app">
         <article>
-            <img :src="record.fields.Photo[0].thumbnails.large.url" />
             <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
             <component :is="dynamicComponent" />
         </article>
