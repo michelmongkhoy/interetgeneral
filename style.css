@@ -129,6 +129,14 @@ article ul li {
     font-weight: normal;
 }
 
+article ol li {
+    font-family: 'IBM Plex Serif', "Georgia", serif;
+    font-size: 21px;
+    line-height: 40px;
+    color: #92575D;
+    font-weight: normal;
+}
+
 article h2 {
     font-family: "Alegreya Sans", sans-serif;
     font-weight: 900;
