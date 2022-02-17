@@ -152,9 +152,9 @@ img {
     margin-right: 25px;
 }
 
-logo-evenement {
-float: left;
-margin: 0 15px 15px 0;
+logo.evenement {
+    float: left;
+    margin: 0 15px 15px 0;
 }
 
 article h1 {
