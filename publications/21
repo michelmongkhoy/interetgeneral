@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WS5J4Q2');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        article header h2 mark {
+            background-color: #208E8B;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+    <title>Pour une République sociale et écologique : Reconstruire le triptyque communes - département - État
+    </title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title"
+        content="Pour une République sociale et écologique : Reconstruire le triptyque communes - département - État – Intérêt Général">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/cover-note-20.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title"
+        content="Planifier l'avenir de notre système électrique : les enseignements des scénarios de transformation du système électrique 1/2" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://interetgeneral.net/publications/20.html" />
+    <meta property="og:image" content="http://interetgeneral.net/cover-note-20.png" />
+    <meta property="og:description" content="" />
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WS5J4Q2" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="home">
+        <h1 class="title"><a href="../index.html">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="../index.html">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../index.html">Accueil</a>
+            <a href="../la-fabrique/index.html">La fabrique</a>
+            <a href="../le-conseil/index.html">Le conseil</a>
+            <a href="../publications/index.html">Publications</a>
+            <a href="../presse/index.html">Presse</a>
+            <a href="../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <article>
+        <header>
+            <h2><mark>#20</mark></h2>
+            <h1><mark>Planifier l'avenir de notre système électrique : les enseignements des scénarios de transformation du système électrique 1/2</mark></h1>
+        </header>
+
+        <p class="message"><i>Téléchargez la version complète de la note au format pdf <a href="./pdf/21.pdf">ici</a>.
+                </i>
+        </p>
+<p>
+    Ces travaux prennent la forme de deux épisodes qui se complètent, les propositions politiques de l’épisode II se lisent à la lumière
+    des différents enjeux mis en évidence dans l’épisode I. Ces deux épisodes se concentrent sur le mix électrique et n’abordent pas directement
+    l’ensemble de la bifurcation écologique et énergétique. Des fiches techniques publiées conjointement proposent un contenu pédagogique détaillé
+    afin de comprendre le système électrique français et propose un état des lieux des connaissances scientifiques, techniques et sociales concernant
+    les différents moyens de production d’électricité.</p>
+<p>
+  <ul>
+    <li><b>Épisode I</b> Les enseignements des scénarios de transformation du système électrique. Cette note présente une comparaison inédite
+    des différents scénarios de transformation du système électrique français : RTE 2021, négaWatt 2021, ADEME 2018, négaTep 2017, etc.
+    Elle considère l’ensemble des enjeux liés à chaque moyen de production d’électricité : impacts sur le climat, sur la biodiversité,
+    consommation de ressources, pollutions, coûts, sûreté et sécurité, création d’emplois, précarité énergétique et paris technologiques.
+    <li><b>Épisode II</b> Planifier un système électrique au service d’impératifs sociaux, écologiques et démocratiques.
+    Cette note propose une stratégie politique générale de planification sociale, écologique et démocratique de notre système électrique
+    sur le long terme, afin de nous conduire à la neutralité carbone en 2050. Différentes hypothèses sont étudiées pour faire face aux
+    enjeux décarbonation la plus rapide possible et d’une dénucléarisation planifiée.
+    Cette note s’appuie notamment sur l’ensemble des connaissances scientifiques afin de répondre aux incertitudes inhérentes à la prévision
+    des trajectoires de production électrique sur la base de principes écologiques et démocratiques.
+    
+        <p class="message"><i><a
+                    href="./pdf/21.pdf">Téléchargez la version complète de la note au format pdf</a>.</i></p>
+    </article>
+
+</body>
+
+</html>
+
