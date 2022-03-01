@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139613183-1"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js" integrity="sha512-L03kznCrNOfVxOUovR6ESfCz9Gfny7gihUX/huVbQB9zjODtYpxaVtIaAkpetoiyV2eqWbvxMH9fiSv5enX7bw==" crossorigin="anonymous"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-139613183-1');
+    </script>
+
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../style.css">
+    <title>François Thuillier - Conseil d'orientation Scientifique - Intérêt Général</title>
+    <meta name="description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@InteretGen">
+    <meta name="twitter:title" content="François Thuillier - Conseil d'orientation Scientifique - Intérêt Général">
+    <meta name="twitter:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible.">
+    <meta name="twitter:creator" content="@InteretGen">
+    <meta name="twitter:image" content="http://interetgeneral.net/logo400x400.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="François Thuillier - Conseil d'orientation Scientifique - Intérêt Général" />
+    <meta property="og:url" content="http://interetgeneral.net/presse" />
+    <meta property="og:image" content="http://interetgeneral.net/logo400x400.png" />
+    <meta property="og:description"
+        content="Intérêt général est un laboratoire d’idées indépendant, composé de représentants des secteurs public, privé et universitaire, désireux de démontrer qu’une alternative est possible." />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+</head>
+
+<body>
+
+    <header class="home">
+        <h1 class="title"><a href="#">INTÉRET GÉNÉRAL</a></h1>
+        <h2 class="subtitle"><a href="#">La <b>fabrique</b> de <b>l'alternative</a></b></h2>
+    </header>
+
+    <nav>
+        <p>
+            <a href="../../index.html">Accueil</a>
+            <a href="../../la-fabrique/index.html">La fabrique</a>
+            <a href="../../le-conseil/index.html">Le conseil</a>
+            <a href="../../publications/index.html">Publications</a>
+            <a href="../../presse/index.html">Presse</a>
+            <a href="../../contact/index.html">Contact</a>
+        </p>
+    </nav>
+
+    <div id="app">
+        <article>
+            <img :src="record.fields.Photo[0].thumbnails.large.url" />
+            <h1><mark>{{ record.fields.Prénom }} {{ record.fields.Nom }} </mark></h1>
+            <component :is="dynamicComponent" />
+        </article>
+    </div>
+</body>
+
+<script>
+    var converter = new showdown.Converter()
+    var app = new Vue({
+        el: '#app',
+        data: {
+            imageLink: "",
+            record: {"_table":{"_base":{"_airtable":{"requestTimeout":300000},"_id":"appeXS3kBZ6Hvm7mB"},"id":null,"name":"Conseil Scientifique"},"id":"rec3vUqpM4gnKGPLx","_rawJson":{"id":"rec3vUqpM4gnKGPLx","fields":{"Id":36,"Ordre 8 Juillet 2020":16,"Biographie":"François Thuillier a effectué toute sa carrière dans les services de sécurité, occupant, tant en France qu’à l’étranger, des postes opérationnels ou de recherche, après ses classes préparatoires à l’ENA. Il fut notamment responsable des études sur le terrorisme et le renseignement à l’institut des hautes études de sécurité intérieure (IHESI), et chef du département études et prospective de l’unité de coordination de la lutte antiterroriste (UCLAT). Il fut nommé en 2012 chef de cabinet du préfet, directeur général de la police nationale.\n Il est, depuis 2017, chercheur associé auprès du centre d’études sur les conflits (CECLS), courant français des études critiques de sécurité, après avoir été maitre de conférences à l’IEP Paris. Il est l’auteur de _L’Europe du secret_ (La Documentation Française – 2000), _La révolution antiterroriste_ (Temps Présent – 2019 – Prix IRIS/Géopolitiques de Nantes 2020) et co-auteur d’_Homo Terrorismus_ (Temps Présent – 2020), ainsi que de nombreux articles et entretiens sur les questions générales de sécurité et de libertés publiques.\n Il fut le co-rédacteur du livret sécurité de La France insoumise en 2017 et de la note Mettre la République en sûreté d’Intérêt Général en 2021.\n","Prénom":"François","Nom":"Thuillier","Photo":[{"id":"att38sHp1h7rJegpW","url":"https://dl.airtable.com/.attachments/6a2b60366bf2bfc8dc7f20722c62ecf9/abbf08cb/36.png","filename":"36.png","size":61053,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/ef0633c6de33f56d79d2fdfec85b4f88/0f7bf403","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/93363fbefed1edf0446265d26cf1e56a/716ae054","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/fb187c0e2a976d209c4c3337c17d93fd/e6499ebb","width":3000,"height":3000}}}]},"createdTime":"2020-07-07T21:02:39.000Z"},"fields":{"Id":36,"Ordre 8 Juillet 2020":16,"Biographie":"François Thuillier a effectué toute sa carrière dans les services de sécurité, occupant, tant en France qu’à l’étranger, des postes opérationnels ou de recherche, après ses classes préparatoires à l’ENA. Il fut notamment responsable des études sur le terrorisme et le renseignement à l’institut des hautes études de sécurité intérieure (IHESI), et chef du département études et prospective de l’unité de coordination de la lutte antiterroriste (UCLAT). Il fut nommé en 2012 chef de cabinet du préfet, directeur général de la police nationale.\n Il est, depuis 2017, chercheur associé auprès du centre d’études sur les conflits (CECLS), courant français des études critiques de sécurité, après avoir été maitre de conférences à l’IEP Paris. Il est l’auteur de _L’Europe du secret_ (La Documentation Française – 2000), _La révolution antiterroriste_ (Temps Présent – 2019 – Prix IRIS/Géopolitiques de Nantes 2020) et co-auteur d’_Homo Terrorismus_ (Temps Présent – 2020), ainsi que de nombreux articles et entretiens sur les questions générales de sécurité et de libertés publiques.\n Il fut le co-rédacteur du livret sécurité de La France insoumise en 2017 et de la note Mettre la République en sûreté d’Intérêt Général en 2021.\n","Prénom":"François","Nom":"Thuillier","Photo":[{"id":"att38sHp1h7rJegpW","url":"https://dl.airtable.com/.attachments/6a2b60366bf2bfc8dc7f20722c62ecf9/abbf08cb/36.png","filename":"36.png","size":61053,"type":"image/png","thumbnails":{"small":{"url":"https://dl.airtable.com/.attachmentThumbnails/ef0633c6de33f56d79d2fdfec85b4f88/0f7bf403","width":32,"height":36},"large":{"url":"https://dl.airtable.com/.attachmentThumbnails/93363fbefed1edf0446265d26cf1e56a/716ae054","width":184,"height":207},"full":{"url":"https://dl.airtable.com/.attachmentThumbnails/fb187c0e2a976d209c4c3337c17d93fd/e6499ebb","width":3000,"height":3000}}}]}}
+            ,
+            biography: ""
+        },
+        computed: {
+            dynamicComponent: function () {
+                return {
+                    template: `<div>${this.biography}</div>`,
+                }
+            }
+        },
+        created: function () {
+            this.biography = converter.makeHtml(this.record.fields.Biographie);
+        }
+
+    })
+</script>
+
+</html>
